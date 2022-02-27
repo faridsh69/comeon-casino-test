@@ -11,15 +11,19 @@ const AuthContext = React.createContext<AuthContextInterface>({
 });
 
 export function AuthProvider(props: OnlyChildrenPropsInterface): JSX.Element {
-  const [user, setUser] = React.useState<Partial<UserInterface>>({});
+  const initialUserJson = localStorage.getItem("casino");
+  const initialUser = initialUserJson ? JSON.parse(initialUserJson) : {};
+  const [user, setUser] = React.useState<Partial<UserInterface>>(initialUser);
 
   const isUserLoggedIn = !!user.name;
 
   const login = (user: UserInterface): void => {
+    localStorage.setItem("casino", JSON.stringify(user));
     setUser(user);
   };
 
   const logout = (): void => {
+    localStorage.setItem("casino", JSON.stringify({}));
     setUser({});
   };
 

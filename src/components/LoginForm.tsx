@@ -56,11 +56,11 @@ export default function LoginForm(): JSX.Element {
           dispatch({ type: "rejected", message: response.error });
         } else {
           auth.login(response.player);
-          return navigate("/");
+          return navigate("/casino");
         }
       })
       .catch((error) => {
-        dispatch({ type: "rejected", message: "Something is wrong!" });
+        dispatch({ type: "rejected", message: error.message });
       });
   };
 
