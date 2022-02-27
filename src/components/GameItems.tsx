@@ -13,15 +13,17 @@ export default function GameItems(props: GameItemsPropsInterface): JSX.Element {
       .then((response: GameInterface[]) => {
         casinoDispatch({
           type: "resolved",
-          response: response,
+          games: response,
           message: "",
+          filteredWord: "",
         });
       })
       .catch((error) => {
         casinoDispatch({
           type: "rejected",
-          response: [],
+          games: [],
           message: error,
+          filteredWord: "",
         });
       });
   }, []);

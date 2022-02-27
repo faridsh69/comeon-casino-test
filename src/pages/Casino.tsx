@@ -4,7 +4,7 @@ import GameItems from "../components/GameItems";
 import CategoryItems from "../components/CategoryItems";
 import Logout from "../components/Logout";
 import PlayerItem from "../components/PlayerItem";
-import Search from "../components/Search";
+import SearchGame from "../components/SearchGame";
 import CasinoPageStateInterface from "../interfaces/game/CasinoPageStateInterface";
 import CasinoPageDispatchInterface from "../interfaces/game/CasinoPageDispatchInterface";
 
@@ -28,11 +28,25 @@ function casinoReducer(
       return {
         loading: false,
         message: "",
-        games: action.response,
-        gameRows: action.response,
+        games: action.games,
+        // @todo in bala bayad filter shode ro pass bedi
+        gameRows: action.games,
       };
     }
-    // @todo in bala bayad filter shode ro pass bedi
+    case "filtering": {
+      const filteredItems = [...state.games].filter((item) => {
+        if (
+          item.name.toLowerCase().includes(action.filteredWord.toLowerCase())
+        ) {
+          return item;
+        }
+      });
+      console.log(filteredItems);
+      return {
+        ...state,
+        gameRows: filteredItems,
+      };
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -57,7 +71,7 @@ export default function Casino(): JSX.Element {
           <Logout />
         </div>
         <div className="four wide column">
-          <Search />
+          <SearchGame casinoState={state} casinoDispatch={dispatch} />
         </div>
       </div>
       <div className="ui grid">
