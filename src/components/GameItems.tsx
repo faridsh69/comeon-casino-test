@@ -1,52 +1,44 @@
 import React from "react";
-import GameInterface from "../interfaces/game/GameInterface";
-import GameItemsPropsInterface from "../interfaces/game/GameItemsPropsInterface";
-import { getGames } from "../Services/CasinoService";
-import GameItem from "./GameItem";
 
-export default function GameItems(props: GameItemsPropsInterface): JSX.Element {
-  const { casinoState, casinoDispatch } = props;
-  const { gameRows, message, loading } = casinoState;
+import { getGames } from "../Services/CasinoService";
+import Alert from "./Alert";
+import GameItem from "./GameItem";
+import GameInterface from "../interfaces/game/GameInterface";
+import GameItemsStateInterface from "../interfaces/game/GameItemsStateInterface";
+
+export default function GameItems(): JSX.Element {
+  const [state, setState] = React.useState<GameItemsStateInterface>({
+    loading: true,
+    errorMessage: "",
+    games: [],
+  });
+  const { loading, errorMessage, games } = state;
 
   React.useEffect(() => {
     getGames()
       .then((response: GameInterface[]) => {
-        casinoDispatch({
-          type: "resolved",
-          games: response,
-          message: "",
-          filteredWord: "",
-        });
+        setState({ ...state, games: response, loading: false });
       })
       .catch((error) => {
-        casinoDispatch({
-          type: "rejected",
-          games: [],
-          message: error,
-          filteredWord: "",
-        });
+        setState({ ...state, errorMessage: error.message, loading: false });
       });
   }, []);
 
-  if (loading) return <>Loading...</>;
+  if (loading) {
+    return <>Loading...</>;
+  }
 
-  if (message)
-    return (
-      <div className="ui warning message">
-        <div className="header">{message}</div>
-      </div>
-    );
+  if (errorMessage) {
+    return <Alert status="warning" message={errorMessage} />;
+  }
 
-  if (!gameRows.length)
-    return (
-      <div className="ui info message">
-        <div className="header">No game found based on your search!</div>
-      </div>
-    );
+  if (!games.length) {
+    return <Alert status="info" message="No games found!" />;
+  }
 
   return (
     <>
-      {gameRows.map((game: GameInterface) => (
+      {games.map((game: GameInterface) => (
         <GameItem game={game} key={game.code} />
       ))}
     </>

@@ -19,16 +19,13 @@ export default function InGame(): JSX.Element {
     script.src = "/lib/comeon.game-1.0.min.js";
     script.async = true;
     document.body.appendChild(script);
-    console.log(window.comeon);
-    // window.comeon.game.launch(code as string);
+    script.onload = () => {
+      window.comeon.game.launch(code as string);
+    };
 
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
-
-  React.useEffect(() => {
-    console.log(window.comeon);
   }, []);
 
   return (

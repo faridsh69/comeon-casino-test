@@ -33,7 +33,7 @@ function casinoReducer(
         gameRows: action.games,
       };
     }
-    case "filtering": {
+    case "filterSearch": {
       const filteredItems = [...state.games].filter((item) => {
         if (
           item.name.toLowerCase().includes(action.filteredWord.toLowerCase())
@@ -41,7 +41,19 @@ function casinoReducer(
           return item;
         }
       });
-      console.log(filteredItems);
+      return {
+        ...state,
+        gameRows: filteredItems,
+      };
+    }
+    case "filterCategory": {
+      const filteredItems = [...state.games].filter((item) => {
+        if (
+          item.name.toLowerCase().includes(action.filteredWord.toLowerCase())
+        ) {
+          return item;
+        }
+      });
       return {
         ...state,
         gameRows: filteredItems,
@@ -78,7 +90,7 @@ export default function Casino(): JSX.Element {
         <div className="twelve wide column">
           <h3 className="ui dividing header">Games</h3>
           <div className="ui relaxed divided game items links">
-            <GameItems casinoState={state} casinoDispatch={dispatch} />
+            <GameItems />
           </div>
         </div>
         <div className="four wide column">

@@ -1,17 +1,18 @@
 import React from "react";
-import CategoryInterface from "../interfaces/category/CategoryInterface";
-import CategoryStateInterface from "../interfaces/category/CategoryStateInterface";
 
 import { getCategories } from "../Services/CasinoService";
+import Alert from "./Alert";
 import CategoryItem from "./CategoryItem";
+import CategoryInterface from "../interfaces/category/CategoryInterface";
+import CategoryItemsStateInterface from "../interfaces/category/CategoryItemsStateInterface";
 
-export default function GameItems(): JSX.Element {
-  const [state, setState] = React.useState<CategoryStateInterface>({
-    categories: [],
+export default function CategoryItems(): JSX.Element {
+  const [state, setState] = React.useState<CategoryItemsStateInterface>({
     loading: true,
-    message: "",
+    errorMessage: "",
+    categories: [],
   });
-  const { loading, message, categories } = state;
+  const { loading, errorMessage, categories } = state;
 
   React.useEffect(() => {
     getCategories()
@@ -19,25 +20,21 @@ export default function GameItems(): JSX.Element {
         setState({ ...state, categories: response, loading: false });
       })
       .catch((error) => {
-        setState({ ...state, message: error.message, loading: false });
+        setState({ ...state, errorMessage: error.message, loading: false });
       });
   }, []);
 
-  if (loading) return <>Loading...</>;
+  if (loading) {
+    return <>Loading...</>;
+  }
 
-  if (message)
-    return (
-      <div className="ui warning message">
-        <div className="header">{message}</div>
-      </div>
-    );
+  if (errorMessage) {
+    return <Alert status="warning" message={errorMessage} />;
+  }
 
-  if (!categories.length)
-    return (
-      <div className="ui info message">
-        <div className="header">No categories found!</div>
-      </div>
-    );
+  if (!categories.length) {
+    return <Alert status="info" message="No categories found!" />;
+  }
 
   return (
     <>

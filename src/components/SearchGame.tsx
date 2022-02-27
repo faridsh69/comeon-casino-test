@@ -12,7 +12,7 @@ export default function SearchGame(
     const target = event.target as HTMLTextAreaElement;
 
     casinoDispatch({
-      type: "filtering",
+      type: "filterSearch",
       message,
       games,
       filteredWord: target.value,
