@@ -1,22 +1,19 @@
 import React from "react";
 
-import SearchGamePropsInterface from "../interfaces/game/SearchGamePropsInterface";
+import useCasinoContext from "../contexts/CasinoContext";
 
-export default function SearchGame(
-  props: SearchGamePropsInterface
-): JSX.Element {
-  const { casinoState, casinoDispatch } = props;
-  const { message, games } = casinoState;
+export default function SearchGame(): JSX.Element {
+  const casinoContext = useCasinoContext();
 
   const handleChange = (event: React.SyntheticEvent) => {
     const target = event.target as HTMLTextAreaElement;
-
-    casinoDispatch({
-      type: "filterSearch",
-      message,
-      games,
-      filteredWord: target.value,
-    });
+    casinoContext.filterByName(target.value);
+    // casinoDispatch({
+    //   type: "filterSearch",
+    //   message,
+    //   games,
+    //   filteredWord: target.value,
+    // });
   };
 
   return (

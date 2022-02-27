@@ -5,7 +5,7 @@ export default function GameItem(props: GameItemPropsInterface): JSX.Element {
   const { game } = props;
   const navigage = useNavigate();
 
-  const navigateToGame = (code: string) => {
+  const navigateToInGame = (code: string) => {
     return navigage(`/casino/${code}`);
   };
 
@@ -22,7 +22,7 @@ export default function GameItem(props: GameItemPropsInterface): JSX.Element {
         <div className="extra">
           <div
             className="play ui right floated secondary button inverted"
-            onClick={() => navigateToGame(game.code)}
+            onClick={() => navigateToInGame(game.code)}
           >
             Play
             <i className="right chevron icon"></i>

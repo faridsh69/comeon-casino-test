@@ -5,19 +5,21 @@ import Alert from "./Alert";
 import GameItem from "./GameItem";
 import GameInterface from "../interfaces/game/GameInterface";
 import GameItemsStateInterface from "../interfaces/game/GameItemsStateInterface";
+import useCasinoContext from "../contexts/CasinoContext";
 
 export default function GameItems(): JSX.Element {
+  const { filteredGames, setDatabaseGames } = useCasinoContext();
   const [state, setState] = React.useState<GameItemsStateInterface>({
     loading: true,
     errorMessage: "",
-    games: [],
   });
-  const { loading, errorMessage, games } = state;
+  const { loading, errorMessage } = state;
 
   React.useEffect(() => {
     getGames()
       .then((response: GameInterface[]) => {
-        setState({ ...state, games: response, loading: false });
+        setDatabaseGames(response);
+        setState({ ...state, loading: false });
       })
       .catch((error) => {
         setState({ ...state, errorMessage: error.message, loading: false });
@@ -32,13 +34,13 @@ export default function GameItems(): JSX.Element {
     return <Alert status="warning" message={errorMessage} />;
   }
 
-  if (!games.length) {
+  if (!filteredGames.length) {
     return <Alert status="info" message="No games found!" />;
   }
 
   return (
     <>
-      {games.map((game: GameInterface) => (
+      {filteredGames.map((game: GameInterface) => (
         <GameItem game={game} key={game.code} />
       ))}
     </>

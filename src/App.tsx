@@ -1,16 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./styles/global.css";
+import { AuthProvider } from "./contexts/AuthContext";
+import AuthMiddleware from "./Middlewares/AuthMiddleware";
+import GuestMiddleware from "./Middlewares/GuestMiddleware";
 import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Casino from "./pages/Casino";
 import InGame from "./pages/InGame";
-import RouteItemInterface from "./interfaces/RouteItemInterface";
 import Header from "./components/Header";
-import { AuthProvider } from "./contexts/AuthContext";
-import AuthMiddleware from "./Middlewares/AuthMiddleware";
-import GuestMiddleware from "./Middlewares/GuestMiddleware";
+import RouteItemInterface from "./interfaces/RouteItemInterface";
 
 export default function App(): JSX.Element {
   const routeItems: RouteItemInterface[] = [
