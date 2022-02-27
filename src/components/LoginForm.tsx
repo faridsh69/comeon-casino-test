@@ -1,4 +1,4 @@
-export default function Login(): JSX.Element {
+export default function LoginForm(): JSX.Element {
   return (
     <div className="login">
       <div className="ui grid centered">
