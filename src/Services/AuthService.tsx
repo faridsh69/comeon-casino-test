@@ -15,7 +15,7 @@ export default async function postLoginFormData(
     username: formData.username,
     password: formData.password,
   });
-  setTimeout(() => {}, 4000);
+
   const res: Response = await fetch(apiUrl + action, { method, headers, body });
 
   return await res.json();
