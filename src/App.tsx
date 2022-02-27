@@ -9,19 +9,15 @@ import InGame from "./pages/InGame";
 import RouteItemInterface from "./interfaces/RouteItemInterface";
 import Header from "./components/Header";
 import { AuthProvider } from "./contexts/AuthContext";
-import RequireAuthMiddleware from "./Middlewares/RequireAuthMiddleware";
+import AuthMiddleware from "./Middlewares/AuthMiddleware";
+import GuestMiddleware from "./Middlewares/GuestMiddleware";
 
 export default function App(): JSX.Element {
   const routeItems: RouteItemInterface[] = [
     { name: "home", path: "/", component: Home, middlware: null },
     { name: "login", path: "login", component: Login, middlware: "guest" },
     { name: "Casino", path: "casino", component: Casino, middlware: "auth" },
-    {
-      name: "in-game",
-      path: "casino/in-game",
-      component: InGame,
-      middlware: "auth",
-    },
+    { name: "in-game", path: "in-game", component: InGame, middlware: "auth" },
   ];
 
   return (
@@ -35,10 +31,14 @@ export default function App(): JSX.Element {
                 path={routeItem.path}
                 key={routeItem.name}
                 element={
-                  routeItem.middlware ? (
-                    <RequireAuthMiddleware>
+                  routeItem.middlware === "auth" ? (
+                    <AuthMiddleware>
                       <routeItem.component />
-                    </RequireAuthMiddleware>
+                    </AuthMiddleware>
+                  ) : routeItem.middlware === "guest" ? (
+                    <GuestMiddleware>
+                      <routeItem.component />
+                    </GuestMiddleware>
                   ) : (
                     <routeItem.component />
                   )

@@ -1,10 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 import useAuth from "../contexts/AuthContext";
 
 export default function Logout(): JSX.Element {
   const auth = useAuth();
+  const navigate = useNavigate();
 
   const logout = () => {
     auth.logout();
+    return navigate("/login");
   };
 
   return (
