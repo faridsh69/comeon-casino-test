@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import useAuth from "../contexts/UserContext";
+import useAuth from "../contexts/AuthContext";
 import OnlyChildrenPropsInterface from "../interfaces/OnlyChildrenPropsInterface";
 
 export default function RequireAuthMiddleware(
