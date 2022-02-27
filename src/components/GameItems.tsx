@@ -1,6 +1,6 @@
 import React from "react";
-import GameInterface from "../interfaces/GameInterface";
-import GameItemsPropsInterface from "../interfaces/GameItemsPropsInterface";
+import GameInterface from "../interfaces/game/GameInterface";
+import GameItemsPropsInterface from "../interfaces/game/GameItemsPropsInterface";
 import { getGames } from "../Services/CasinoService";
 import GameItem from "./GameItem";
 

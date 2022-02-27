@@ -1,5 +1,5 @@
-import CategoryInterface from "../interfaces/CategoryInterface";
-import GameInterface from "../interfaces/GameInterface";
+import CategoryInterface from "../interfaces/category/CategoryInterface";
+import GameInterface from "../interfaces/game/GameInterface";
 
 export async function getGames(): Promise<GameInterface[]> {
   const apiUrl = process.env.REACT_APP_API_URL;

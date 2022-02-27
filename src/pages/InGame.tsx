@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ComeonInterface from "../interfaces/ComeonInterface";
+import ComeonInterface from "../interfaces/game/ComeonInterface";
 
 import BackButton from "./../components/BackButton";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import AuthContextInterface from "../interfaces/AuthContextInterface";
-import OnlyChildrenPropsInterface from "../interfaces/OnlyChildrenPropsInterface";
-import UserInterface from "../interfaces/UserInterface";
+import AuthContextInterface from "../interfaces/auth/AuthContextInterface";
+import AuthProviderPropsInterface from "../interfaces/auth/AuthProviderPropsInterface";
+import UserInterface from "../interfaces/auth/UserInterface";
 
 const AuthContext = React.createContext<AuthContextInterface>({
   user: {},
@@ -10,7 +10,7 @@ const AuthContext = React.createContext<AuthContextInterface>({
   logout: () => {},
 });
 
-export function AuthProvider(props: OnlyChildrenPropsInterface): JSX.Element {
+export function AuthProvider(props: AuthProviderPropsInterface): JSX.Element {
   const initialUserJson = localStorage.getItem("casino");
   const initialUser = initialUserJson ? JSON.parse(initialUserJson) : {};
   const [user, setUser] = React.useState<Partial<UserInterface>>(initialUser);

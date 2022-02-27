@@ -1,4 +1,4 @@
-import CategoryItemPropsInterface from "../interfaces/CategoryItemPropsInterface";
+import CategoryItemPropsInterface from "../interfaces/category/CategoryItemPropsInterface";
 
 export default function CategoryItem(
   props: CategoryItemPropsInterface

@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
-import GameItemPropsInterface from "../interfaces/GameItemPropsInterface";
+import GameItemPropsInterface from "../interfaces/game/GameItemPropsInterface";
 
 export default function GameItem(props: GameItemPropsInterface): JSX.Element {
   const { game } = props;

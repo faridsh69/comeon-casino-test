@@ -1,11 +1,12 @@
+import React from "react";
+
 import GameItems from "../components/GameItems";
 import CategoryItems from "../components/CategoryItems";
 import Logout from "../components/Logout";
 import PlayerItem from "../components/PlayerItem";
 import Search from "../components/Search";
-import React from "react";
-import CasinoPageStateInterface from "../interfaces/CasinoPageStateInterface";
-import CasinoPageDispatchInterface from "../interfaces/CasinoPageDispatchInterface";
+import CasinoPageStateInterface from "../interfaces/game/CasinoPageStateInterface";
+import CasinoPageDispatchInterface from "../interfaces/game/CasinoPageDispatchInterface";
 
 function casinoReducer(
   state: CasinoPageStateInterface,

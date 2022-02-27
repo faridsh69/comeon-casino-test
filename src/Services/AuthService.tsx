@@ -1,5 +1,5 @@
-import LoginFormDataInterface from "../interfaces/LoginFormDataInterface";
-import LoginFormResponseInterface from "../interfaces/LoginFormResponseInterface";
+import LoginFormDataInterface from "../interfaces/auth/LoginFormDataInterface";
+import LoginFormResponseInterface from "../interfaces/auth/LoginFormResponseInterface";
 
 export default async function postLoginFormData(
   formData: LoginFormDataInterface

@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import LoginFormDataInterface from "../interfaces/LoginFormDataInterface";
-import LoginFormTargetInterface from "../interfaces/LoginFormTargetInterface";
 import postLoginFormData from "../Services/AuthService";
 import useAuth from "../contexts/AuthContext";
-import LoginPageStateInterface from "../interfaces/LoginPageStateInterface";
-import LoginPageDispatchInterface from "../interfaces/LoginPageDispatchInterface";
-import LoginFormResponseInterface from "../interfaces/LoginFormResponseInterface";
+import LoginPageStateInterface from "../interfaces/auth/LoginPageStateInterface";
+import LoginPageDispatchInterface from "../interfaces/auth/LoginPageDispatchInterface";
+import LoginFormTargetInterface from "../interfaces/auth/LoginFormTargetInterface";
+import LoginFormDataInterface from "../interfaces/auth/LoginFormDataInterface";
+import LoginFormResponseInterface from "../interfaces/auth/LoginFormResponseInterface";
 
 function loginReducer(
   state: LoginPageStateInterface,

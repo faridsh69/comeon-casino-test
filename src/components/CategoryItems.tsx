@@ -1,6 +1,6 @@
 import React from "react";
-import CategoryInterface from "../interfaces/CategoryInterface";
-import CategoryStateInterface from "../interfaces/CategoryStateInterface";
+import CategoryInterface from "../interfaces/category/CategoryInterface";
+import CategoryStateInterface from "../interfaces/category/CategoryStateInterface";
 
 import { getCategories } from "../Services/CasinoService";
 import CategoryItem from "./CategoryItem";
