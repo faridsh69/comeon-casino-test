@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 import AuthContextInterface from "../interfaces/AuthContextInterface";
-import AuthProviderPropsInterface from "../interfaces/AuthProviderPropsInterface";
+import OnlyChildrenPropsInterface from "../interfaces/OnlyChildrenPropsInterface";
 import UserInterface from "../interfaces/UserInterface";
 
 const AuthContext = React.createContext<AuthContextInterface>({
@@ -10,10 +10,10 @@ const AuthContext = React.createContext<AuthContextInterface>({
   logout: () => {},
 });
 
-export function AuthProvider(props: AuthProviderPropsInterface): JSX.Element {
+export function AuthProvider(props: OnlyChildrenPropsInterface): JSX.Element {
   const [user, setUser] = React.useState<Partial<UserInterface>>({});
 
-  const isUserLoggedIn = !!user;
+  const isUserLoggedIn = !!user.name;
 
   const login = (user: UserInterface): void => {
     setUser(user);

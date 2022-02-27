@@ -1,8 +1,11 @@
 export default function LoginForm(): JSX.Element {
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+  };
   return (
     <div className="login">
       <div className="ui grid centered">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="fields">
             <div className="required field">
               <div className="ui icon input">
