@@ -2,7 +2,7 @@ import GameInterface from "./GameInterface";
 
 export default interface CasinoPageDispatchInterface {
   type: "pending" | "rejected" | "resolved";
-  games: GameInterface[];
+  response: GameInterface[];
   message: string;
   filteredWord?: string;
 }

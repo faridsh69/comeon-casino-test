@@ -17,7 +17,12 @@ export default function App(): JSX.Element {
     { name: "home", path: "/", component: Home, middlware: null },
     { name: "login", path: "login", component: Login, middlware: "guest" },
     { name: "Casino", path: "casino", component: Casino, middlware: "auth" },
-    { name: "in-game", path: "in-game", component: InGame, middlware: "auth" },
+    {
+      name: "in-game",
+      path: "casino/:code",
+      component: InGame,
+      middlware: "auth",
+    },
   ];
 
   return (

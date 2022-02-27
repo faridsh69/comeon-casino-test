@@ -1,5 +1,5 @@
-import GameItem from "../components/GameItem";
-import CategoryItem from "../components/CategoryItem";
+import GameItems from "../components/GameItems";
+import CategoryItems from "../components/CategoryItems";
 import Logout from "../components/Logout";
 import PlayerItem from "../components/PlayerItem";
 import Search from "../components/Search";
@@ -27,8 +27,8 @@ function casinoReducer(
       return {
         loading: false,
         message: "",
-        games: action.games,
-        gameRows: action.games,
+        games: action.response,
+        gameRows: action.response,
       };
     }
     // @todo in bala bayad filter shode ro pass bedi
@@ -63,13 +63,13 @@ export default function Casino(): JSX.Element {
         <div className="twelve wide column">
           <h3 className="ui dividing header">Games</h3>
           <div className="ui relaxed divided game items links">
-            <GameItem games={state.gameRows} dispatch={dispatch} />
+            <GameItems casinoState={state} casinoDispatch={dispatch} />
           </div>
         </div>
         <div className="four wide column">
           <h3 className="ui dividing header">Categories</h3>
           <div className="ui selection animated list category items">
-            <CategoryItem />
+            <CategoryItems />
           </div>
         </div>
       </div>
