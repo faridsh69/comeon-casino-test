@@ -5,6 +5,7 @@ import Alert from "./Alert";
 import CategoryItem from "./CategoryItem";
 import CategoryInterface from "../interfaces/category/CategoryInterface";
 import CategoryListStateInterface from "../interfaces/category/CategoryListStateInterface";
+import Loading from "./Loading";
 
 export default function CategoryList(): JSX.Element {
   const [state, setState] = React.useState<CategoryListStateInterface>({
@@ -38,7 +39,7 @@ export default function CategoryList(): JSX.Element {
   }, []);
 
   if (loading) {
-    return <>Loading...</>;
+    return <Loading />;
   }
 
   if (errorMessage) {

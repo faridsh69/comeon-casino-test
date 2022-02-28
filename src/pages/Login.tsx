@@ -8,6 +8,7 @@ import LoginPageDispatchInterface from "../interfaces/auth/LoginPageDispatchInte
 import LoginFormTargetInterface from "../interfaces/auth/LoginFormTargetInterface";
 import LoginFormDataInterface from "../interfaces/auth/LoginFormDataInterface";
 import LoginFormResponseInterface from "../interfaces/auth/LoginFormResponseInterface";
+import Loading from "../components/Loading";
 
 function loginReducer(
   state: LoginPageStateInterface,
@@ -33,6 +34,7 @@ export default function Login() {
     loading: false,
     message: "",
   });
+  const { loading, message } = state;
 
   const abortController = new AbortController();
   React.useEffect(() => {
@@ -41,30 +43,28 @@ export default function Login() {
     };
   }, []);
 
-  const handleSubmit = (event: React.SyntheticEvent): void => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
-    const target = event.target as typeof event.target &
-      LoginFormTargetInterface;
-    const formData: LoginFormDataInterface = {
-      username: target.username.value,
-      password: target.password.value,
-    };
+    const username = event.currentTarget.username.value;
+    const password = event.currentTarget.password.value;
+    const formData: LoginFormDataInterface = { username, password };
     dispatch({ type: "pending", message: "" });
+
     postLogin(formData, abortController)
       .then((response: LoginFormResponseInterface) => {
         if (response.status === "fail") {
           dispatch({ type: "rejected", message: response.error });
         } else {
-          response.player.username = target.username.value;
+          response.player.username = username;
           auth.login(response.player);
+
           return navigate("/casino");
         }
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((error: any) => {
         dispatch({
           type: "rejected",
-          message: "Something went wrong! Try again later.",
+          message: error.message,
         });
       });
   };
@@ -88,8 +88,8 @@ export default function Login() {
             </div>
             <div className="field">
               <div className="ui icon input">
-                {state.loading ? (
-                  "Loading..."
+                {loading ? (
+                  <Loading />
                 ) : (
                   <>
                     <input type="submit" value="Login" />
@@ -102,9 +102,9 @@ export default function Login() {
         </form>
       </div>
       <br />
-      {state.message ? (
+      {message ? (
         <div className="ui warning message">
-          <div className="header">{state.message}</div>
+          <div className="header">{message}</div>
         </div>
       ) : (
         ""

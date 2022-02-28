@@ -5,9 +5,8 @@ import { useCasinoContext } from "../contexts/CasinoContext";
 export default function SearchGame(): JSX.Element {
   const { filterByName, filterName } = useCasinoContext();
 
-  const handleChange = (event: React.SyntheticEvent) => {
-    const target = event.target as HTMLTextAreaElement;
-    filterByName(target.value);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    filterByName(event.target.value);
   };
 
   return (

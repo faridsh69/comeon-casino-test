@@ -6,6 +6,7 @@ import GameItem from "./GameItem";
 import GameInterface from "../interfaces/game/GameInterface";
 import GameListStateInterface from "../interfaces/game/GameListStateInterface";
 import { useCasinoContext } from "../contexts/CasinoContext";
+import Loading from "./Loading";
 
 export default function GameList(): JSX.Element {
   const { filteredGames, setDatabaseGames } = useCasinoContext();
@@ -36,7 +37,7 @@ export default function GameList(): JSX.Element {
   }, []);
 
   if (loading) {
-    return <>Loading...</>;
+    return <Loading />;
   }
 
   if (errorMessage) {
