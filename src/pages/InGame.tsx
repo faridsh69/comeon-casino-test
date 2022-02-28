@@ -14,7 +14,7 @@ export default function InGame(): JSX.Element {
   const params = useParams();
   const code = params.code;
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const script: HTMLScriptElement = document.createElement("script");
     script.src = "/lib/comeon.game-1.0.min.js";
     script.async = true;

@@ -16,5 +16,5 @@ export default function AuthMiddleware(
     }
   }, []);
 
-  return <React.Fragment>{props.children}</React.Fragment>;
+  return <>{auth.isUserLoggedIn ? props.children : ""}</>;
 }

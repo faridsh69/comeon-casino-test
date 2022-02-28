@@ -1,15 +1,19 @@
 import { useNavigate } from "react-router-dom";
 
 import useAuth from "../contexts/AuthContext";
+import { postLogout } from "../services/AuthService";
 
 export default function Logout(): JSX.Element {
   const auth = useAuth();
   const navigate = useNavigate();
 
   const logout = () => {
-    // @send req to server
-    auth.logout();
-    return navigate("/login");
+    postLogout({ username: auth.user.username }).then((response) => {
+      if (response.status === "success") {
+        auth.logout();
+        return navigate("/login");
+      }
+    });
   };
 
   return (

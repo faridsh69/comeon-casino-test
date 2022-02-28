@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./styles/global.css";
 import { AuthProvider } from "./contexts/AuthContext";
-import AuthMiddleware from "./Middlewares/AuthMiddleware";
-import GuestMiddleware from "./Middlewares/GuestMiddleware";
+import AuthMiddleware from "./middlewares/AuthMiddleware";
+import GuestMiddleware from "./middlewares/GuestMiddleware";
 import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
 import Login from "./pages/Login";

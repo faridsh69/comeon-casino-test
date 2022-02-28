@@ -7,6 +7,7 @@ import GameInterface from "../interfaces/game/GameInterface";
 
 const CasinoContext = React.createContext<CasinoContextInterface>({
   filteredGames: [],
+  filterName: "",
   setDatabaseGames: (games: GameInterface[]) => {},
   filterByName: (name: string) => {},
   filterByCategory: (categoryId: number) => {},
@@ -59,6 +60,7 @@ export function CasinoContextProvider(
 
   const contextValue: CasinoContextInterface = {
     filteredGames,
+    filterName,
     setDatabaseGames,
     filterByName,
     filterByCategory,

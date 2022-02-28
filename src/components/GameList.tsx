@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getGames } from "../Services/CasinoService";
+import { getGames } from "../services/CasinoService";
 import Alert from "./Alert";
 import GameItem from "./GameItem";
 import GameInterface from "../interfaces/game/GameInterface";
@@ -16,14 +16,23 @@ export default function GameList(): JSX.Element {
   const { loading, errorMessage } = state;
 
   React.useEffect(() => {
-    getGames()
+    let isMounted = true;
+    const abortController = new AbortController();
+    getGames(abortController)
       .then((response: GameInterface[]) => {
         setDatabaseGames(response);
         setState({ ...state, loading: false });
       })
       .catch((error) => {
-        setState({ ...state, errorMessage: error.message, loading: false });
+        if (isMounted) {
+          setState({ ...state, errorMessage: error.message, loading: false });
+        }
       });
+
+    return () => {
+      isMounted = false;
+      abortController.abort();
+    };
   }, []);
 
   if (loading) {

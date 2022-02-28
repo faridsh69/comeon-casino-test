@@ -3,28 +3,36 @@ import AuthContextInterface from "../interfaces/auth/AuthContextInterface";
 import AuthProviderPropsInterface from "../interfaces/auth/AuthProviderPropsInterface";
 import UserInterface from "../interfaces/auth/UserInterface";
 
+const guestUser: UserInterface = {
+  username: "",
+  name: "",
+  avatar: "",
+  event: "",
+};
+const databaseName = "casino-authenticated-user";
+
 const AuthContext = React.createContext<AuthContextInterface>({
-  user: {},
+  user: guestUser,
   isUserLoggedIn: false,
   login: (user: UserInterface) => {},
   logout: () => {},
 });
 
 export function AuthProvider(props: AuthProviderPropsInterface): JSX.Element {
-  const initialUserJson = localStorage.getItem("casino");
-  const initialUser = initialUserJson ? JSON.parse(initialUserJson) : {};
-  const [user, setUser] = React.useState<Partial<UserInterface>>(initialUser);
+  const initialUserJson = localStorage.getItem(databaseName);
+  const initialUser = initialUserJson ? JSON.parse(initialUserJson) : guestUser;
+  const [user, setUser] = React.useState<UserInterface>(initialUser);
 
-  const isUserLoggedIn = !!user.name;
+  const isUserLoggedIn = !!user.username;
 
   const login = (user: UserInterface): void => {
-    localStorage.setItem("casino", JSON.stringify(user));
+    localStorage.setItem(databaseName, JSON.stringify(user));
     setUser(user);
   };
 
   const logout = (): void => {
-    localStorage.setItem("casino", JSON.stringify({}));
-    setUser({});
+    localStorage.setItem(databaseName, JSON.stringify({}));
+    setUser(guestUser);
   };
 
   const contextValue: AuthContextInterface = {

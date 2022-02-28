@@ -3,16 +3,21 @@ import React from "react";
 import useCasinoContext from "../contexts/CasinoContext";
 
 export default function SearchGame(): JSX.Element {
-  const casinoContext = useCasinoContext();
+  const { filterByName, filterName } = useCasinoContext();
 
   const handleChange = (event: React.SyntheticEvent) => {
     const target = event.target as HTMLTextAreaElement;
-    casinoContext.filterByName(target.value);
+    filterByName(target.value);
   };
 
   return (
     <div className="search ui small icon input">
-      <input type="text" placeholder="Search Game" onChange={handleChange} />
+      <input
+        type="text"
+        placeholder="Search Game"
+        onChange={handleChange}
+        value={filterName}
+      />
       <i className="search icon"></i>
     </div>
   );

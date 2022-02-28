@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import postLoginFormData from "../Services/AuthService";
+import { postLogin } from "../services/AuthService";
 import useAuth from "../contexts/AuthContext";
 import LoginPageStateInterface from "../interfaces/auth/LoginPageStateInterface";
 import LoginPageDispatchInterface from "../interfaces/auth/LoginPageDispatchInterface";
@@ -43,11 +43,12 @@ export default function Login() {
       password: target.password.value,
     };
     dispatch({ type: "pending", message: "" });
-    postLoginFormData(formData)
+    postLogin(formData)
       .then((response: LoginFormResponseInterface) => {
         if (response.status === "fail") {
           dispatch({ type: "rejected", message: response.error });
         } else {
+          response.player.username = target.username.value;
           auth.login(response.player);
           return navigate("/casino");
         }

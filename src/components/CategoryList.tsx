@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getCategories } from "../Services/CasinoService";
+import { getCategories } from "../services/CasinoService";
 import Alert from "./Alert";
 import CategoryItem from "./CategoryItem";
 import CategoryInterface from "../interfaces/category/CategoryInterface";
@@ -15,13 +15,22 @@ export default function CategoryList(): JSX.Element {
   const { loading, errorMessage, categories } = state;
 
   React.useEffect(() => {
-    getCategories()
+    let isMounted = true;
+    const abortController = new AbortController();
+    getCategories(abortController)
       .then((response: CategoryInterface[]) => {
         setState({ ...state, categories: response, loading: false });
       })
       .catch((error) => {
-        setState({ ...state, errorMessage: error.message, loading: false });
+        if (isMounted) {
+          setState({ ...state, errorMessage: error.message, loading: false });
+        }
       });
+
+    return () => {
+      isMounted = false;
+      abortController.abort();
+    };
   }, []);
 
   if (loading) {
