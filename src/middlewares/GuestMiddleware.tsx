@@ -12,7 +12,7 @@ export default function GuestMiddleware(
 
   React.useEffect(() => {
     if (isUserLoggedIn) {
-      return navigate("/");
+      return navigate("/casino");
     }
   }, []);
 

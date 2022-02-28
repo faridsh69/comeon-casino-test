@@ -5,7 +5,6 @@ import { postLogin } from "../services/AuthService";
 import { useAuth } from "../contexts/AuthContext";
 import LoginPageStateInterface from "../interfaces/auth/LoginPageStateInterface";
 import LoginPageDispatchInterface from "../interfaces/auth/LoginPageDispatchInterface";
-import LoginFormTargetInterface from "../interfaces/auth/LoginFormTargetInterface";
 import LoginFormDataInterface from "../interfaces/auth/LoginFormDataInterface";
 import LoginFormResponseInterface from "../interfaces/auth/LoginFormResponseInterface";
 import Loading from "../components/Loading";
@@ -17,13 +16,16 @@ function loginReducer(
 ): LoginPageStateInterface {
   switch (action.type) {
     case "pending": {
-      return { loading: true, message: "" };
+      return { status: "pending" };
     }
     case "rejected": {
-      return { loading: false, message: action.message };
+      return { status: "rejected", error: action.error };
+    }
+    case "resolved": {
+      return { status: "resolved", user: action.user };
     }
     default: {
-      throw new Error(`Unhandled action type: ${action.type}`);
+      throw new Error(`Unhandled action status: ${action.type}`);
     }
   }
 }
@@ -32,41 +34,40 @@ export default function Login() {
   const auth = useAuth();
   const navigate = useNavigate();
   const [state, dispatch] = React.useReducer(loginReducer, {
-    loading: false,
-    message: "",
+    status: "idle",
+    error: "",
   });
-  const { loading, message } = state;
+  const { status, error, user } = state;
 
   const abortController = new AbortController();
   React.useEffect(() => {
+    if (user) {
+      auth.login(user);
+      return navigate("/casino");
+    }
     return () => {
       abortController.abort();
     };
-  }, []);
+  }, [user]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     const username = event.currentTarget.username.value;
     const password = event.currentTarget.password.value;
     const formData: LoginFormDataInterface = { username, password };
-    dispatch({ type: "pending", message: "" });
+    dispatch({ type: "pending" });
 
     postLogin(formData, abortController)
       .then((response: LoginFormResponseInterface) => {
         if (response.status === "fail") {
-          dispatch({ type: "rejected", message: response.error });
+          dispatch({ type: "rejected", error: response.error });
         } else {
           response.player.username = username;
-          auth.login(response.player);
-
-          return navigate("/casino");
+          dispatch({ type: "resolved", user: response.player });
         }
       })
       .catch((error: any) => {
-        dispatch({
-          type: "rejected",
-          message: error.message,
-        });
+        dispatch({ type: "rejected", error: error.message });
       });
   };
 
@@ -95,7 +96,7 @@ export default function Login() {
               </div>
               <div className="field">
                 <div className="ui icon input">
-                  {loading ? (
+                  {status === "pending" ? (
                     <Loading />
                   ) : (
                     <>
@@ -109,9 +110,9 @@ export default function Login() {
           </form>
         </div>
         <br />
-        {message ? (
+        {error ? (
           <div className="ui warning message">
-            <div className="header">{message}</div>
+            <div className="header">{error}</div>
           </div>
         ) : (
           ""

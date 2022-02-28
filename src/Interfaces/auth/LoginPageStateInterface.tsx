@@ -1,4 +1,7 @@
+import UserInterface from "./UserInterface";
+
 export default interface LoginPageStateInterface {
-  loading: boolean;
-  message: string;
+  status: "idle" | "pending" | "rejected" | "resolved";
+  error?: string;
+  user?: UserInterface;
 }
