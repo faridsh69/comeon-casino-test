@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
              Rails
@@ -35,11 +33,9 @@
   margin: 0em 0em 0em 2rem;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
      Internal
@@ -112,14 +108,10 @@
   font-size: 1em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -9,12 +9,9 @@
  *
  */
 
-
-
 /*******************************
             Loader
 *******************************/
-
 
 /* Standard Size */
 .ui.loader {
@@ -26,14 +23,14 @@
   text-align: center;
   z-index: 1000;
   -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 /* Static Shape */
 .ui.loader:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0%;
   left: 50%;
   width: 100%;
@@ -45,15 +42,15 @@
 /* Active Shape */
 .ui.loader:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0%;
   left: 50%;
   width: 100%;
   height: 100%;
   -webkit-animation: loader 0.6s linear;
-          animation: loader 0.6s linear;
+  animation: loader 0.6s linear;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   border-radius: 500rem;
   border-color: #aaaaaa transparent transparent;
   border-style: solid;
@@ -65,21 +62,21 @@
 @-webkit-keyframes loader {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes loader {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -113,7 +110,6 @@
       Coupling
 --------------------*/
 
-
 /* Show inside active dimmer */
 .ui.dimmer .loader {
   display: block;
@@ -141,11 +137,9 @@
   border-color: #aaaaaa transparent transparent;
 }
 
-
 /*******************************
              Types
 *******************************/
-
 
 /*-------------------
         Text
@@ -158,16 +152,15 @@
   font-style: normal;
 }
 
-
 /*******************************
             States
 *******************************/
 
 .ui.indeterminate.loader:after {
   -webkit-animation-direction: reverse;
-          animation-direction: reverse;
+  animation-direction: reverse;
   -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  animation-duration: 1.2s;
 }
 .ui.loader.active,
 .ui.loader.visible {
@@ -178,16 +171,13 @@
   display: none;
 }
 
-
 /*******************************
             Variations
 *******************************/
 
-
 /*-------------------
         Sizes
 --------------------*/
-
 
 /* Loader */
 .ui.inverted.dimmer .ui.mini.loader,
@@ -258,22 +248,18 @@
   left: 0em;
   top: 0em;
   -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 .ui.inline.loader.active,
 .ui.inline.loader.visible {
   display: inline-block;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

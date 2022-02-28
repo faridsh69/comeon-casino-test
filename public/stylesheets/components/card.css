@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -9,12 +9,9 @@
  *
  */
 
-
-
 /*******************************
             Standard
 *******************************/
-
 
 /*--------------
       Cards
@@ -41,7 +38,7 @@
 .ui.cards:after,
 .ui.card:after {
   display: block;
-  content: ' ';
+  content: " ";
   height: 0px;
   clear: both;
   overflow: hidden;
@@ -65,8 +62,8 @@
   border-radius: 0.2857rem;
   box-shadow: 0px 0.2em 0px 0px #d4d4d5, 0px 0px 0px 1px #d4d4d5;
   -webkit-transition: box-shadow 0.2s ease;
-          transition: box-shadow 0.2s ease;
-  z-index: '';
+  transition: box-shadow 0.2s ease;
+  z-index: "";
 }
 .ui.card {
   margin: 1em 0em;
@@ -130,7 +127,7 @@
 .ui.cards > .card > .content:after,
 .ui.card > .content:after {
   display: block;
-  content: ' ';
+  content: " ";
   height: 0px;
   clear: both;
   overflow: hidden;
@@ -140,7 +137,7 @@
 .ui.card > .content > .header {
   display: block;
   margin: 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.85);
 }
 
@@ -241,17 +238,16 @@
       Links
 ---------------*/
 
-
 /* Generic */
 .ui.cards > .card > .content a:not(.ui),
 .ui.card > .content a:not(.ui) {
-  color: '';
+  color: "";
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 .ui.cards > .card > .content a:not(.ui):hover,
 .ui.card > .content a:not(.ui):hover {
-  color: '';
+  color: "";
 }
 
 /* Header */
@@ -283,17 +279,15 @@
 .ui.cards > .card > .button:last-child,
 .ui.card > .button:last-child {
   margin: 0em -1px -0.2em;
-  width: -webkit-calc(100% +  2px );
-  width: calc(100% +  2px );
+  width: -webkit-calc(100% + 2px);
+  width: calc(100% + 2px);
 }
 
 /*--------------
      Labels
 ---------------*/
 
-
 /*-----Star----- */
-
 
 /* Icon */
 .ui.cards > .card > .content .star.icon,
@@ -301,7 +295,7 @@
   cursor: pointer;
   opacity: 0.75;
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 .ui.cards > .card > .content .star.icon:hover,
 .ui.card > .content .star.icon:hover {
@@ -315,14 +309,13 @@
 
 /*-----Like----- */
 
-
 /* Icon */
 .ui.cards > .card > .content .like.icon,
 .ui.card > .content .like.icon {
   cursor: pointer;
   opacity: 0.75;
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 .ui.cards > .card > .content .like.icon:hover,
 .ui.card > .content .like.icon:hover {
@@ -352,7 +345,7 @@
   color: rgba(0, 0, 0, 0.4);
   box-shadow: none;
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 .ui.cards > .card > .extra a:not(.ui),
@@ -364,11 +357,9 @@
   color: #00b2f3;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
         Fluid
@@ -389,7 +380,7 @@ a.ui.card:hover,
 .ui.link.card:hover {
   cursor: pointer;
   z-index: 5;
-  background: '';
+  background: "";
   border: none;
   box-shadow: 0px 0.2em 0px 0px #bebebf, 0px 0px 0px 1px rgba(39, 41, 43, 0.3);
 }
@@ -410,12 +401,12 @@ a.ui.card:hover,
   margin-right: -1em;
 }
 .ui.two.cards > .card {
-  width: -webkit-calc( 50%  -  2em );
-  width: calc( 50%  -  2em );
+  width: -webkit-calc(50% - 2em);
+  width: calc(50% - 2em);
   margin-left: 1em;
   margin-right: 1em;
 }
-.ui.two.cards > .card:nth-child(2n+1) {
+.ui.two.cards > .card:nth-child(2n + 1) {
   clear: left;
 }
 .ui.three.cards {
@@ -423,12 +414,12 @@ a.ui.card:hover,
   margin-right: -1em;
 }
 .ui.three.cards > .card {
-  width: -webkit-calc( 33.33333333%  -  2em );
-  width: calc( 33.33333333%  -  2em );
+  width: -webkit-calc(33.33333333% - 2em);
+  width: calc(33.33333333% - 2em);
   margin-left: 1em;
   margin-right: 1em;
 }
-.ui.three.cards > .card:nth-child(3n+1) {
+.ui.three.cards > .card:nth-child(3n + 1) {
   clear: left;
 }
 .ui.four.cards {
@@ -436,12 +427,12 @@ a.ui.card:hover,
   margin-right: -0.75em;
 }
 .ui.four.cards > .card {
-  width: -webkit-calc( 25%  -  1.5em );
-  width: calc( 25%  -  1.5em );
+  width: -webkit-calc(25% - 1.5em);
+  width: calc(25% - 1.5em);
   margin-left: 0.75em;
   margin-right: 0.75em;
 }
-.ui.four.cards > .card:nth-child(4n+1) {
+.ui.four.cards > .card:nth-child(4n + 1) {
   clear: left;
 }
 .ui.five.cards {
@@ -449,12 +440,12 @@ a.ui.card:hover,
   margin-right: -0.75em;
 }
 .ui.five.cards > .card {
-  width: -webkit-calc( 20%  -  1.5em );
-  width: calc( 20%  -  1.5em );
+  width: -webkit-calc(20% - 1.5em);
+  width: calc(20% - 1.5em);
   margin-left: 0.75em;
   margin-right: 0.75em;
 }
-.ui.five.cards > .card:nth-child(5n+1) {
+.ui.five.cards > .card:nth-child(5n + 1) {
   clear: left;
 }
 .ui.six.cards {
@@ -462,12 +453,12 @@ a.ui.card:hover,
   margin-right: -0.75em;
 }
 .ui.six.cards > .card {
-  width: -webkit-calc( 16.66666667%  -  1.5em );
-  width: calc( 16.66666667%  -  1.5em );
+  width: -webkit-calc(16.66666667% - 1.5em);
+  width: calc(16.66666667% - 1.5em);
   margin-left: 0.75em;
   margin-right: 0.75em;
 }
-.ui.six.cards > .card:nth-child(6n+1) {
+.ui.six.cards > .card:nth-child(6n + 1) {
   clear: left;
 }
 .ui.seven.cards {
@@ -475,12 +466,12 @@ a.ui.card:hover,
   margin-right: -0.5em;
 }
 .ui.seven.cards > .card {
-  width: -webkit-calc( 14.28571429%  -  1em );
-  width: calc( 14.28571429%  -  1em );
+  width: -webkit-calc(14.28571429% - 1em);
+  width: calc(14.28571429% - 1em);
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
-.ui.seven.cards > .card:nth-child(7n+1) {
+.ui.seven.cards > .card:nth-child(7n + 1) {
   clear: left;
 }
 .ui.eight.cards {
@@ -488,13 +479,13 @@ a.ui.card:hover,
   margin-right: -0.5em;
 }
 .ui.eight.cards > .card {
-  width: -webkit-calc( 12.5%  -  1em );
-  width: calc( 12.5%  -  1em );
+  width: -webkit-calc(12.5% - 1em);
+  width: calc(12.5% - 1em);
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-size: 11px;
 }
-.ui.eight.cards > .card:nth-child(8n+1) {
+.ui.eight.cards > .card:nth-child(8n + 1) {
   clear: left;
 }
 .ui.nine.cards {
@@ -502,13 +493,13 @@ a.ui.card:hover,
   margin-right: -0.5em;
 }
 .ui.nine.cards > .card {
-  width: -webkit-calc( 11.11111111%  -  1em );
-  width: calc( 11.11111111%  -  1em );
+  width: -webkit-calc(11.11111111% - 1em);
+  width: calc(11.11111111% - 1em);
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-size: 10px;
 }
-.ui.nine.cards > .card:nth-child(9n+1) {
+.ui.nine.cards > .card:nth-child(9n + 1) {
   clear: left;
 }
 .ui.ten.cards {
@@ -516,19 +507,18 @@ a.ui.card:hover,
   margin-right: -0.5em;
 }
 .ui.ten.cards > .card {
-  width: -webkit-calc( 10%  -  1em );
-  width: calc( 10%  -  1em );
+  width: -webkit-calc(10% - 1em);
+  width: calc(10% - 1em);
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
-.ui.ten.cards > .card:nth-child(10n+1) {
+.ui.ten.cards > .card:nth-child(10n + 1) {
   clear: left;
 }
 
 /*-------------------
       Doubling
 --------------------*/
-
 
 /* Mobily Only */
 @media only screen and (max-width: 767px) {
@@ -546,8 +536,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.three.doubling.cards .card {
-    width: -webkit-calc( 50%  -  2em );
-    width: calc( 50%  -  2em );
+    width: -webkit-calc(50% - 2em);
+    width: calc(50% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -556,8 +546,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.four.doubling.cards .card {
-    width: -webkit-calc( 50%  -  2em );
-    width: calc( 50%  -  2em );
+    width: -webkit-calc(50% - 2em);
+    width: calc(50% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -566,8 +556,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.five.doubling.cards .card {
-    width: -webkit-calc( 50%  -  2em );
-    width: calc( 50%  -  2em );
+    width: -webkit-calc(50% - 2em);
+    width: calc(50% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -576,8 +566,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.six.doubling.cards .card {
-    width: -webkit-calc( 50%  -  2em );
-    width: calc( 50%  -  2em );
+    width: -webkit-calc(50% - 2em);
+    width: calc(50% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -586,8 +576,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.seven.doubling.cards .card {
-    width: -webkit-calc( 33.33333333%  -  2em );
-    width: calc( 33.33333333%  -  2em );
+    width: -webkit-calc(33.33333333% - 2em);
+    width: calc(33.33333333% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -596,8 +586,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.eight.doubling.cards .card {
-    width: -webkit-calc( 33.33333333%  -  2em );
-    width: calc( 33.33333333%  -  2em );
+    width: -webkit-calc(33.33333333% - 2em);
+    width: calc(33.33333333% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -606,8 +596,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.nine.doubling.cards .card {
-    width: -webkit-calc( 33.33333333%  -  2em );
-    width: calc( 33.33333333%  -  2em );
+    width: -webkit-calc(33.33333333% - 2em);
+    width: calc(33.33333333% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -616,8 +606,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.ten.doubling.cards .card {
-    width: -webkit-calc( 33.33333333%  -  2em );
-    width: calc( 33.33333333%  -  2em );
+    width: -webkit-calc(33.33333333% - 2em);
+    width: calc(33.33333333% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -639,8 +629,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.three.doubling.cards .card {
-    width: -webkit-calc( 50%  -  2em );
-    width: calc( 50%  -  2em );
+    width: -webkit-calc(50% - 2em);
+    width: calc(50% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -649,8 +639,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.four.doubling.cards .card {
-    width: -webkit-calc( 50%  -  2em );
-    width: calc( 50%  -  2em );
+    width: -webkit-calc(50% - 2em);
+    width: calc(50% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -659,8 +649,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.five.doubling.cards .card {
-    width: -webkit-calc( 33.33333333%  -  2em );
-    width: calc( 33.33333333%  -  2em );
+    width: -webkit-calc(33.33333333% - 2em);
+    width: calc(33.33333333% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -669,8 +659,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.six.doubling.cards .card {
-    width: -webkit-calc( 33.33333333%  -  2em );
-    width: calc( 33.33333333%  -  2em );
+    width: -webkit-calc(33.33333333% - 2em);
+    width: calc(33.33333333% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -679,8 +669,8 @@ a.ui.card:hover,
     margin-right: -1em;
   }
   .ui.eight.doubling.cards .card {
-    width: -webkit-calc( 33.33333333%  -  2em );
-    width: calc( 33.33333333%  -  2em );
+    width: -webkit-calc(33.33333333% - 2em);
+    width: calc(33.33333333% - 2em);
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -689,8 +679,8 @@ a.ui.card:hover,
     margin-right: -0.75em;
   }
   .ui.eight.doubling.cards .card {
-    width: -webkit-calc( 25%  -  1.5em );
-    width: calc( 25%  -  1.5em );
+    width: -webkit-calc(25% - 1.5em);
+    width: calc(25% - 1.5em);
     margin-left: 0.75em;
     margin-right: 0.75em;
   }
@@ -699,8 +689,8 @@ a.ui.card:hover,
     margin-right: -0.75em;
   }
   .ui.nine.doubling.cards .card {
-    width: -webkit-calc( 25%  -  1.5em );
-    width: calc( 25%  -  1.5em );
+    width: -webkit-calc(25% - 1.5em);
+    width: calc(25% - 1.5em);
     margin-left: 0.75em;
     margin-right: 0.75em;
   }
@@ -709,8 +699,8 @@ a.ui.card:hover,
     margin-right: -0.75em;
   }
   .ui.ten.doubling.cards .card {
-    width: -webkit-calc( 20%  -  1.5em );
-    width: calc( 20%  -  1.5em );
+    width: -webkit-calc(20% - 1.5em);
+    width: calc(20% - 1.5em);
     margin-left: 0.75em;
     margin-right: 0.75em;
   }
@@ -732,8 +722,8 @@ a.ui.card:hover,
     height: auto !important;
     margin: 1em 1em;
     padding: 0 !important;
-    width: -webkit-calc( 100%  -  2em ) !important;
-    width: calc( 100%  -  2em ) !important;
+    width: -webkit-calc(100% - 2em) !important;
+    width: calc(100% - 2em) !important;
   }
 }
 
@@ -745,14 +735,10 @@ a.ui.card:hover,
   font-size: 1em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
     User Variable Overrides
 *******************************/
-

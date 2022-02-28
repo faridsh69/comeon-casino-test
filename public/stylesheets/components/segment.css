@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -9,8 +9,6 @@
  *
  */
 
-
-
 /*******************************
             Segment
 *******************************/
@@ -18,7 +16,8 @@
 .ui.segment {
   position: relative;
   background-color: #ffffff;
-  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15), 0px 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15),
+    0px 1px 2px 0 rgba(0, 0, 0, 0.05);
   margin: 1rem 0em;
   padding: 1em 1em;
   border-radius: 0.2857rem;
@@ -31,7 +30,7 @@
   margin-bottom: 0em;
 }
 .ui.segment:after {
-  content: '';
+  content: "";
   display: block;
   height: 0px;
   clear: both;
@@ -66,7 +65,6 @@
 /*-------------------
     Loose Coupling
 --------------------*/
-
 
 /* Header */
 .ui.inverted.segment > .ui.header {
@@ -106,17 +104,16 @@
 .ui.basic.table.segment {
   background: #ffffff;
   border: none;
-  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15), 0px 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15),
+    0px 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 .ui[class*="very basic"].table.segment {
   padding: 1em 1em;
 }
 
-
 /*******************************
              Types
 *******************************/
-
 
 /*-------------------
         Piled
@@ -137,7 +134,7 @@
 .ui.piled.segment:before {
   background-color: #ffffff;
   visibility: visible;
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   left: 0px;
@@ -147,15 +144,15 @@
 }
 .ui.piled.segment:after {
   -webkit-transform: rotate(1.2deg);
-      -ms-transform: rotate(1.2deg);
-          transform: rotate(1.2deg);
+  -ms-transform: rotate(1.2deg);
+  transform: rotate(1.2deg);
   top: 0;
   z-index: -1;
 }
 .ui.piled.segment:before {
   -webkit-transform: rotate(-1.2deg);
-      -ms-transform: rotate(-1.2deg);
-          transform: rotate(-1.2deg);
+  -ms-transform: rotate(-1.2deg);
+  transform: rotate(-1.2deg);
   top: 0;
   z-index: -2;
 }
@@ -185,7 +182,7 @@
 }
 .ui.stacked.segment:after,
 .ui.stacked.segment:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -3px;
   left: 0%;
@@ -237,14 +234,13 @@
 --------------------*/
 
 .ui.raised.segment {
-  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15), 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15),
+    0px 1px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
 
 /*******************************
             States
 *******************************/
-
 
 /*--------------
     Disabled
@@ -266,11 +262,11 @@
   text-shadow: none !important;
   color: transparent !important;
   -webkit-transition: all 0s linear;
-          transition: all 0s linear;
+  transition: all 0s linear;
 }
 .ui.loading.segment:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0%;
   left: 0%;
   background: rgba(255, 255, 255, 0.8);
@@ -281,16 +277,16 @@
 }
 .ui.loading.segment:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
   margin: -1.5em 0em 0em -1.5em;
   width: 3em;
   height: 3em;
   -webkit-animation: segment-spin 0.6s linear;
-          animation: segment-spin 0.6s linear;
+  animation: segment-spin 0.6s linear;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   border-radius: 500rem;
   border-color: #aaaaaa rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
   border-style: solid;
@@ -300,33 +296,30 @@
   z-index: 101;
 }
 @-webkit-keyframes segment-spin {
-
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes segment-spin {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
        Basic
@@ -522,13 +515,25 @@
   color: rgba(0, 0, 0, 0.8);
 }
 .ui.secondary.inverted.segment {
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
-  background: linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: -webkit-linear-gradient(
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
   color: #fafafa;
 }
 .ui.tertiary.inverted.segment {
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
-  background: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: -webkit-linear-gradient(
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
   color: #f0f0f0;
 }
 
@@ -540,10 +545,10 @@
   top: 0px;
   bottom: 0px;
   margin: 0em -1px;
-  width: -webkit-calc(100% +  2px );
-  width: calc(100% +  2px );
-  max-width: -webkit-calc(100% +  2px );
-  max-width: calc(100% +  2px );
+  width: -webkit-calc(100% + 2px);
+  width: calc(100% + 2px);
+  max-width: -webkit-calc(100% + 2px);
+  max-width: calc(100% + 2px);
   border-radius: 0px;
   box-shadow: none;
   border: 1px solid #d4d4d5;
@@ -577,14 +582,10 @@
   margin-bottom: 0em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

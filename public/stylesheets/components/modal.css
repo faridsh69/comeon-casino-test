@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
              Modal
@@ -29,9 +27,9 @@
   box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
   border-radius: 0.2857rem;
   -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
   will-change: top, left, margin, transform, opacity;
 }
 .ui.modal > :first-child:not(.icon),
@@ -44,11 +42,9 @@
   border-bottom-right-radius: 0.2857rem;
 }
 
-
 /*******************************
             Content
 *******************************/
-
 
 /*--------------
      Close
@@ -77,7 +73,7 @@
 
 .ui.modal > .header {
   display: block;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05)) #ffffff;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.05)) #ffffff;
   margin: 0em;
@@ -107,7 +103,7 @@
 /* Image */
 .ui.modal > .content > .image {
   display: table-cell;
-  width: '';
+  width: "";
   vertical-align: top;
 }
 .ui.modal > .content > .image[class*="top aligned"] {
@@ -124,7 +120,7 @@
 }
 .ui.modal > .content > .icon + .description,
 .ui.modal > .content > .image + .description {
-  min-width: '';
+  min-width: "";
   width: 80%;
   padding-left: 2em;
 }
@@ -153,7 +149,6 @@
 /*-------------------
        Responsive
 --------------------*/
-
 
 /* Modal Width */
 @media only screen and (max-width: 767px) {
@@ -242,7 +237,6 @@
   }
 }
 
-
 /*******************************
              Types
 *******************************/
@@ -274,11 +268,9 @@
   }
 }
 
-
 /*******************************
             Variations
 *******************************/
-
 
 /* A modal that cannot fit on the page */
 .scrolling.dimmable.dimmed {
@@ -302,7 +294,6 @@
   }
 }
 
-
 /*******************************
              States
 *******************************/
@@ -311,11 +302,9 @@
   display: block;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
    Full Screen
@@ -418,14 +407,10 @@
   }
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

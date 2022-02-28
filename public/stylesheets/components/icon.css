@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -9,16 +9,18 @@
  *
  */
 
-
-
 /*******************************
              Icon
 *******************************/
 
 @font-face {
-  font-family: 'Icons';
+  font-family: "Icons";
   src: url("../themes/default/assets/fonts/icons.eot");
-  src: url("../themes/default/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("../themes/default/assets/fonts/icons.svg#icons") format('svg'), url("../themes/default/assets/fonts/icons.woff") format('woff'), url("../themes/default/assets/fonts/icons.ttf") format('truetype');
+  src: url("../themes/default/assets/fonts/icons.eot?#iefix")
+      format("embedded-opentype"),
+    url("../themes/default/assets/fonts/icons.svg#icons") format("svg"),
+    url("../themes/default/assets/fonts/icons.woff") format("woff"),
+    url("../themes/default/assets/fonts/icons.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -31,7 +33,7 @@ i.icon {
   margin: 0em 0.25rem 0em 0em;
   width: 1.23em;
   height: 0.9em;
-  font-family: 'Icons';
+  font-family: "Icons";
   font-style: normal;
   line-height: 1;
   font-weight: normal;
@@ -41,17 +43,15 @@ i.icon {
   font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 i.icon:before {
   background: none !important;
 }
 
-
 /*******************************
              Types
 *******************************/
-
 
 /*--------------
     Loading
@@ -60,31 +60,29 @@ i.icon:before {
 i.icon.loading {
   height: 1em;
   -webkit-animation: icon-loading 2s linear infinite;
-          animation: icon-loading 2s linear infinite;
+  animation: icon-loading 2s linear infinite;
 }
 @-webkit-keyframes icon-loading {
-
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes icon-loading {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 
 /*******************************
              States
@@ -104,11 +102,9 @@ i.disabled.icon {
   opacity: 0.3 !important;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
          Link
@@ -118,7 +114,7 @@ i.link.icon {
   cursor: pointer;
   opacity: 0.8;
   -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 i.link.icon:hover {
   opacity: 1 !important;
@@ -148,13 +144,13 @@ i.circular.inverted.icon {
 i.flipped.icon,
 i.horizontally.flipped.icon {
   -webkit-transform: scale(-1, 1);
-      -ms-transform: scale(-1, 1);
-          transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 i.vertically.flipped.icon {
   -webkit-transform: scale(1, -1);
-      -ms-transform: scale(1, -1);
-          transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
 }
 
 /*-------------------
@@ -165,14 +161,14 @@ i.rotated.icon,
 i.right.rotated.icon,
 i.clockwise.rotated.icon {
   -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 i.left.rotated.icon,
 i.counterclockwise.rotated.icon {
   -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 /*-------------------
@@ -265,52 +261,52 @@ i.inverted.yellow.icon {
 i.inverted.bordered.icon,
 i.inverted.circular.icon {
   background-color: #222222 !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 i.inverted.bordered.black.icon,
 i.inverted.circular.black.icon {
   background-color: #1b1c1d !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 i.inverted.bordered.blue.icon,
 i.inverted.circular.blue.icon {
   background-color: #3b83c0 !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 i.inverted.bordered.green.icon,
 i.inverted.circular.green.icon {
   background-color: #5bbd72 !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 i.inverted.bordered.orange.icon,
 i.inverted.circular.orange.icon {
   background-color: #e07b53 !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 i.inverted.bordered.pink.icon,
 i.inverted.circular.pink.icon {
   background-color: #d9499a !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 i.inverted.bordered.purple.icon,
 i.inverted.circular.purple.icon {
   background-color: #564f8a !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 i.inverted.bordered.red.icon,
 i.inverted.circular.red.icon {
   background-color: #d95c5c !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 i.inverted.bordered.teal.icon,
 i.inverted.circular.teal.icon {
   background-color: #00b5ad !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 i.inverted.bordered.yellow.icon,
 i.inverted.circular.yellow.icon {
   background-color: #f2c61f !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 /*-------------------
@@ -387,12 +383,9 @@ for instance `lemon icon` not `lemon outline icon` since there is only one lemon
 
 *******************************/
 
-
-
 /*******************************
             Icons
 *******************************/
-
 
 /* Web Content */
 i.icon.search:before {
@@ -1741,7 +1734,6 @@ i.icon.wechat:before {
   content: "\f1d7";
 }
 
-
 /*******************************
             Aliases
 *******************************/
@@ -2120,8 +2112,6 @@ i.icon.weixin:before {
   content: "\f1d7";
 }
 
-
 /*******************************
          Site Overrides
 *******************************/
-

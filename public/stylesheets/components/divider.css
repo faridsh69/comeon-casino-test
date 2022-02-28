@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
             Divider
@@ -24,9 +22,9 @@
   letter-spacing: 0.05em;
   color: rgba(0, 0, 0, 0.85);
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -54,7 +52,7 @@
 .ui.horizontal.divider {
   position: relative;
   height: auto;
-  margin: '';
+  margin: "";
   overflow: hidden;
   line-height: 1;
   text-align: center;
@@ -62,7 +60,7 @@
 .ui.horizontal.divider:before,
 .ui.horizontal.divider:after {
   position: absolute;
-  content: '';
+  content: "";
   z-index: 3;
   width: 50%;
   top: 50%;
@@ -71,8 +69,8 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .ui.horizontal.divider:before {
-  margin-left: -webkit-calc(-50% -  1em );
-  margin-left: calc(-50% -  1em );
+  margin-left: -webkit-calc(-50% - 1em);
+  margin-left: calc(-50% - 1em);
 }
 .ui.horizontal.divider:after {
   margin-left: 1em;
@@ -94,20 +92,20 @@
   line-height: 0em;
   text-align: center;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .ui.vertical.divider:before,
 .ui.vertical.divider:after {
   position: absolute;
   left: 50%;
-  content: '';
+  content: "";
   z-index: 3;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   width: 0%;
-  height: -webkit-calc(100% -  1rem );
-  height: calc(100% -  1rem );
+  height: -webkit-calc(100% - 1rem);
+  height: calc(100% - 1rem);
 }
 .ui.vertical.divider:before {
   top: -100%;
@@ -135,7 +133,7 @@
   .ui.grid .stackable.row .ui.vertical.divider:after {
     position: absolute;
     left: auto;
-    content: '';
+    content: "";
     z-index: 3;
     width: 50%;
     top: 50%;
@@ -164,11 +162,9 @@
   vertical-align: middle;
 }
 
-
 /*******************************
           Variations
 *******************************/
-
 
 /*--------------
     Hidden
@@ -231,14 +227,10 @@
   font-size: 1rem;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -9,24 +9,21 @@
  *
  */
 
-
-
 /*******************************
             Sticky
 *******************************/
 
 .ui.sticky {
   position: static;
-  -webkit-transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, bottom 0.2s ease;
-          transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+  -webkit-transition: width 0.2s ease, height 0.2s ease, top 0.2s ease,
+    bottom 0.2s ease;
+  transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, bottom 0.2s ease;
   z-index: 800;
 }
-
 
 /*******************************
             States
 *******************************/
-
 
 /* Bound */
 .ui.sticky.bound {
@@ -54,7 +51,6 @@
   bottom: 0px;
 }
 
-
 /*******************************
             Types
 *******************************/
@@ -67,14 +63,10 @@
   position: sticky;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

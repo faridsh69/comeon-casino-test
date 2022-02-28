@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
              Nag
@@ -33,7 +31,7 @@
   color: rgba(0, 0, 0, 0.8);
   border-radius: 0em 0em 0.2857rem 0.2857rem;
   -webkit-transition: 0.2s background ease;
-          transition: 0.2s background ease;
+  transition: 0.2s background ease;
 }
 a.ui.nag {
   cursor: pointer;
@@ -53,14 +51,12 @@ a.ui.nag {
   margin: -0.5em 0em 0em;
   color: #ffffff;
   -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
-
 
 /*******************************
              States
 *******************************/
-
 
 /* Hover */
 .ui.nag:hover {
@@ -71,11 +67,9 @@ a.ui.nag {
   opacity: 1;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
      Static
@@ -121,7 +115,6 @@ a.ui.nag {
   color: rgba(0, 0, 0, 0.4);
 }
 
-
 /*******************************
            Groups
 *******************************/
@@ -136,14 +129,10 @@ a.ui.nag {
   border-radius: 0.2857rem 0.2857rem 0em 0em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
         User Overrides
 *******************************/
-

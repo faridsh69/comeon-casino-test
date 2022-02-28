@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
             List
@@ -35,11 +33,9 @@ ol.ui.list:last-child,
   padding-bottom: 0em;
 }
 
-
 /*******************************
             Content
 *******************************/
-
 
 /* List Item */
 ul.ui.list li,
@@ -57,7 +53,7 @@ ul.ui.list > li:first-child:after,
 ol.ui.list > li:first-child:after,
 .ui.list > .list > .item,
 .ui.list > .item:after {
-  content: '';
+  content: "";
   display: block;
   height: 0;
   clear: both;
@@ -94,7 +90,7 @@ ol.ui.list ol,
   padding-right: 0.3em;
   vertical-align: middle;
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 .ui.list .list > .item i[class*="top aligned"].icon,
 .ui.list > .item > i[class*="top aligned"].icon {
@@ -196,7 +192,7 @@ ol.ui.list ol,
 .ui.list > .item .header {
   display: block;
   margin: 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -217,7 +213,6 @@ ol.ui.list ol,
   float: right;
   margin: 0em 0em 0em 1em;
 }
-
 
 /*******************************
             Coupling
@@ -247,11 +242,9 @@ ol.ui.list ol,
   padding-bottom: 0em;
 }
 
-
 /*******************************
             Types
 *******************************/
-
 
 /*-------------------
       Horizontal
@@ -293,11 +286,9 @@ ol.ui.list ol,
   display: inline-block;
 }
 
-
 /*******************************
              States
 *******************************/
-
 
 /*-------------------
        Disabled
@@ -322,11 +313,9 @@ ol.ui.list ol,
   color: rgba(0, 0, 0, 0.8);
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
        Inverted
@@ -374,7 +363,7 @@ ol.ui.list ol,
 .ui.link.list .item a {
   color: rgba(0, 0, 0, 0.4);
   -webkit-transition: 0.2s color ease;
-          transition: 0.2s color ease;
+  transition: 0.2s color ease;
 }
 .ui.link.list a.item:hover,
 .ui.link.list .item a:hover {
@@ -420,8 +409,10 @@ ol.ui.list ol,
   margin: 0em;
   color: rgba(0, 0, 0, 0.4);
   border-radius: 0.5em;
-  -webkit-transition: 0.2s color ease, 0.2s padding-left ease, 0.2s background-color ease;
-          transition: 0.2s color ease, 0.2s padding-left ease, 0.2s background-color ease;
+  -webkit-transition: 0.2s color ease, 0.2s padding-left ease,
+    0.2s background-color ease;
+  transition: 0.2s color ease, 0.2s padding-left ease,
+    0.2s background-color ease;
 }
 .ui.selection.list .list > .item:last-child,
 .ui.selection.list > .item:last-child {
@@ -478,8 +469,10 @@ ol.ui.list ol,
 --------------------*/
 
 .ui.animated.list > .item {
-  -webkit-transition: 0.2s color ease, 0.2s padding-left ease, 0.2s background-color ease;
-          transition: 0.2s color ease, 0.2s padding-left ease, 0.2s background-color ease;
+  -webkit-transition: 0.2s color ease, 0.2s padding-left ease,
+    0.2s background-color ease;
+  transition: 0.2s color ease, 0.2s padding-left ease,
+    0.2s background-color ease;
 }
 .ui.animated.list:not(.horizontal) > .item:hover {
   padding-left: 1em;
@@ -520,7 +513,7 @@ ul.ui.list li:before,
   top: auto;
   left: auto;
   margin-left: -1rem;
-  content: '•';
+  content: "•";
   opacity: 1;
   color: rgba(0, 0, 0, 0.8);
   vertical-align: top;
@@ -866,14 +859,10 @@ ol.ui.horizontal.list li:before,
   font-size: 1.71428571rem;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
     User Variable Overrides
 *******************************/
-

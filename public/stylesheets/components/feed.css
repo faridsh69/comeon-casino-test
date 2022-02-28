@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
          Activity Feed
@@ -25,11 +23,9 @@
   margin-top: 0em;
 }
 
-
 /*******************************
             Content
 *******************************/
-
 
 /* Event */
 .ui.feed > .event {
@@ -146,7 +142,6 @@
    Inline Date
 ---------------*/
 
-
 /* Date inside Summary */
 .ui.feed > .event > .content .summary > .date {
   display: inline-block;
@@ -206,7 +201,7 @@
   margin-left: 0.75em;
 }
 .ui.feed > .event > .content .meta > *:after {
-  content: '';
+  content: "";
   color: rgba(0, 0, 0, 0.2);
   top: 0em;
   left: -1em;
@@ -215,9 +210,9 @@
   vertical-align: top;
 }
 .ui.feed > .event > .content .meta .like {
-  color: '';
+  color: "";
   -webkit-transition: 0.2s color ease;
-          transition: 0.2s color ease;
+  transition: 0.2s color ease;
 }
 .ui.feed > .event > .content .meta .like:hover .icon {
   color: #ff2733;
@@ -241,14 +236,13 @@
   opacity: 1;
   color: rgba(0, 0, 0, 0.5);
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 .ui.feed > .event > .content .meta a:hover,
 .ui.feed > .event > .content .meta a:hover .icon,
 .ui.feed > .event > .content .meta > .icon:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-
 
 /*******************************
             Variations
@@ -264,14 +258,10 @@
   font-size: 1.1em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
     User Variable Overrides
 *******************************/
-

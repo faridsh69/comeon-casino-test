@@ -20,7 +20,7 @@ export default function GameList(): JSX.Element {
     const abortController = new AbortController();
     getGames(abortController)
       .then((response: GameInterface[]) => {
-        setDatabaseGames(response);
+        setDatabaseGames(Array.isArray(response) ? response : []);
         setState({ ...state, loading: false });
       })
       .catch((error) => {

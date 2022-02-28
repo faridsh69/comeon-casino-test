@@ -30,7 +30,7 @@ export default function InGame(): JSX.Element {
 
   return (
     <div className="ingame">
-      <div className="ui grid centered">
+      <div className="ui grid centered stackable">
         <div className="three wide column">
           <BackButton />
         </div>

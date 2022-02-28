@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
             Dropdown
@@ -24,14 +22,12 @@
   outline: none;
   text-align: left;
   -webkit-transition: border-radius 0.1s ease, width 0.2s ease;
-          transition: border-radius 0.1s ease, width 0.2s ease;
+  transition: border-radius 0.1s ease, width 0.2s ease;
 }
-
 
 /*******************************
             Content
 *******************************/
-
 
 /*--------------
       Menu
@@ -55,7 +51,7 @@
   border: 1px solid rgba(39, 41, 43, 0.15);
   border-radius: 0em 0em 0.2857rem 0.2857rem;
   -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
   z-index: 11;
   will-change: transform, opacity;
 }
@@ -93,7 +89,7 @@
 .ui.dropdown > .text {
   display: inline-block;
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 /*--------------
@@ -205,16 +201,13 @@
   display: none;
 }
 
-
 /*******************************
             Coupling
 *******************************/
 
-
 /*--------------
    Sub Elements
 ---------------*/
-
 
 /* Icons / Flags / Labels / Image */
 .ui.dropdown > .text > .icon,
@@ -263,7 +256,6 @@
       Menu
 ---------------*/
 
-
 /* Remove Menu Item Divider */
 .ui.dropdown .ui.menu > .item:before,
 .ui.menu .ui.dropdown .menu > .item:before {
@@ -287,7 +279,6 @@
      Button
 ---------------*/
 
-
 /* No Margin On Icon Button */
 .ui.dropdown.icon.button > .dropdown.icon {
   margin: 0em;
@@ -298,16 +289,13 @@
   border-bottom-right-radius: 0em;
 }
 
-
 /*******************************
               Types
 *******************************/
 
-
 /*--------------
     Selection
 ---------------*/
-
 
 /* Displays like a select box */
 .ui.selection.dropdown {
@@ -316,7 +304,7 @@
   white-space: normal;
   outline: 0;
   -webkit-transform: rotateZ(0deg);
-          transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
   min-width: 180px;
   background: #ffffff;
   display: inline-block;
@@ -325,8 +313,10 @@
   box-shadow: none;
   border: 1px solid rgba(39, 41, 43, 0.15);
   border-radius: 0.2857rem;
-  -webkit-transition: border-radius 0.1s ease, width 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
-          transition: border-radius 0.1s ease, width 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+  -webkit-transition: border-radius 0.1s ease, width 0.2s ease,
+    box-shadow 0.2s ease, border 0.2s ease;
+  transition: border-radius 0.1s ease, width 0.2s ease, box-shadow 0.2s ease,
+    border 0.2s ease;
 }
 .ui.selection.dropdown.visible,
 .ui.selection.dropdown.active {
@@ -351,7 +341,7 @@ select.ui.dropdown {
   right: 1.1em;
   opacity: 0.8;
   -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 /* Compact */
@@ -364,17 +354,17 @@ select.ui.dropdown {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
   border-top-width: 0px !important;
   width: auto;
   margin: 0px -1px;
-  min-width: -webkit-calc(100% +  2px );
-  min-width: calc(100% +  2px );
+  min-width: -webkit-calc(100% + 2px);
+  min-width: calc(100% + 2px);
   outline: none;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
   -webkit-transition: box-shadow 0.2s ease, border 0.2s ease;
-          transition: box-shadow 0.2s ease, border 0.2s ease;
+  transition: box-shadow 0.2s ease, border 0.2s ease;
 }
 .ui.selection.dropdown .menu:after,
 .ui.selection.dropdown .menu:before {
@@ -405,8 +395,8 @@ select.ui.dropdown {
 .ui.selection.dropdown .menu > .item {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   padding-left: 1.1em !important;
-  
-/* Add in spacing for scroll bar */
+
+  /* Add in spacing for scroll bar */
   padding-right: -webkit-calc(2.1em) !important;
   padding-right: calc(2.1em) !important;
   white-space: normal;
@@ -466,10 +456,9 @@ select.ui.dropdown {
    Searchable
 ---------------*/
 
-
 /* Search Selection */
 .ui.search.dropdown {
-  min-width: '';
+  min-width: "";
 }
 
 /* Search Dropdown */
@@ -522,7 +511,7 @@ select.ui.dropdown {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
 }
 @media only screen and (max-width: 767px) {
@@ -568,16 +557,13 @@ select.ui.dropdown {
   border-radius: 0.2857rem;
 }
 
-
 /*******************************
             States
 *******************************/
 
-
 /*--------------------
         Hover
 ----------------------*/
-
 
 /* Menu Item Hover */
 .ui.dropdown .menu > .item:hover {
@@ -589,7 +575,6 @@ select.ui.dropdown {
 /*--------------------
         Active
 ----------------------*/
-
 
 /* Menu Item Active */
 .ui.dropdown .menu .active.item {
@@ -619,7 +604,7 @@ select.ui.dropdown {
 
 .ui.loading.dropdown > .text {
   -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 .ui.dropdown > .loading.menu {
   display: block;
@@ -631,7 +616,6 @@ select.ui.dropdown {
     Keyboard Select
 ----------------------*/
 
-
 /* Selected Item */
 .ui.dropdown.selected,
 .ui.dropdown .menu .selected.item {
@@ -642,7 +626,6 @@ select.ui.dropdown {
 /*--------------------
     Search Filtered
 ----------------------*/
-
 
 /* Filtered Item */
 .ui.dropdown > .filtered.text {
@@ -690,7 +673,6 @@ select.ui.dropdown {
         Disabled
 ----------------------*/
 
-
 /* Disabled */
 .ui.disabled.dropdown {
   cursor: default;
@@ -698,16 +680,13 @@ select.ui.dropdown {
   opacity: 0.3;
 }
 
-
 /*******************************
            Variations
 *******************************/
 
-
 /*--------------
     Direction
 ---------------*/
-
 
 /* Flyout Direction */
 .ui.dropdown .menu {
@@ -791,7 +770,6 @@ select.ui.dropdown {
      Simple
 ---------------*/
 
-
 /* Displays without javascript */
 .ui.simple.dropdown .menu:before,
 .ui.simple.dropdown .menu:after {
@@ -806,7 +784,7 @@ select.ui.dropdown {
   width: 0;
   height: 0;
   -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 .ui.simple.active.dropdown,
 .ui.simple.dropdown:hover {
@@ -882,11 +860,11 @@ select.ui.dropdown {
   display: block;
   position: absolute;
   pointer-events: none;
-  content: '';
+  content: "";
   visibility: visible;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 0.5em;
   height: 0.5em;
   box-shadow: -1px -1px 0px 1px rgba(0, 0, 0, 0.1);
@@ -920,8 +898,8 @@ select.ui.dropdown {
   right: auto;
   margin: 0em;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* Top Right  Pointing */
@@ -938,8 +916,8 @@ select.ui.dropdown {
   right: 1em;
   margin: 0em;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* Left Pointing */
@@ -954,8 +932,8 @@ select.ui.dropdown {
   left: -0.25em;
   margin: 0em 0em 0em 0em;
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 /* Right Pointing */
@@ -971,8 +949,8 @@ select.ui.dropdown {
   right: -0.25em;
   margin: 0em 0em 0em 0em;
   -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 /* Bottom Pointing */
@@ -989,8 +967,8 @@ select.ui.dropdown {
   right: auto;
   margin: 0em;
   -webkit-transform: rotate(-135deg);
-      -ms-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
 
 /* Reverse Sub-Menu Direction */
@@ -1019,26 +997,27 @@ select.ui.dropdown {
   right: 1em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
 /* Dropdown Carets */
 @font-face {
-  font-family: 'Dropdown';
-  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMggjB5AAAAC8AAAAYGNtYXAPfuIIAAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5Zjo82LgAAAFwAAABVGhlYWQAQ88bAAACxAAAADZoaGVhAwcB6QAAAvwAAAAkaG10eAS4ABIAAAMgAAAAIGxvY2EBNgDeAAADQAAAABJtYXhwAAoAFgAAA1QAAAAgbmFtZVcZpu4AAAN0AAABRXBvc3QAAwAAAAAEvAAAACAAAwIAAZAABQAAAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADw2gHg/+D/4AHgACAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIPDa//3//wAAAAAAIPDX//3//wAB/+MPLQADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAIABJQElABMAABM0NzY3BTYXFhUUDwEGJwYvASY1AAUGBwEACAUGBoAFCAcGgAUBEgcGBQEBAQcECQYHfwYBAQZ/BwYAAQAAAG4BJQESABMAADc0PwE2MzIfARYVFAcGIyEiJyY1AAWABgcIBYAGBgUI/wAHBgWABwaABQWABgcHBgUFBgcAAAABABIASQC3AW4AEwAANzQ/ATYXNhcWHQEUBwYnBi8BJjUSBoAFCAcFBgYFBwgFgAbbBwZ/BwEBBwQJ/wgEBwEBB38GBgAAAAABAAAASQClAW4AEwAANxE0NzYzMh8BFhUUDwEGIyInJjUABQYHCAWABgaABQgHBgVbAQAIBQYGgAUIBwWABgYFBwAAAAEAAAABAADZuaKOXw889QALAgAAAAAA0ABHWAAAAADQAEdYAAAAAAElAW4AAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAASUAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAASUAAAElAAAAtwASALcAAAAAAAAACgAUAB4AQgBkAIgAqgAAAAEAAAAIABQAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAOAAAAAQAAAAAAAgAOAEcAAQAAAAAAAwAOACQAAQAAAAAABAAOAFUAAQAAAAAABQAWAA4AAQAAAAAABgAHADIAAQAAAAAACgA0AGMAAwABBAkAAQAOAAAAAwABBAkAAgAOAEcAAwABBAkAAwAOACQAAwABBAkABAAOAFUAAwABBAkABQAWAA4AAwABBAkABgAOADkAAwABBAkACgA0AGMAaQBjAG8AbQBvAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAaQBjAG8AbQBvAG8Abmljb21vb24AaQBjAG8AbQBvAG8AbgBSAGUAZwB1AGwAYQByAGkAYwBvAG0AbwBvAG4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('truetype'), url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAVwAAoAAAAABSgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAAdkAAAHZLDXE/09TLzIAAALQAAAAYAAAAGAIIweQY21hcAAAAzAAAABMAAAATA9+4ghnYXNwAAADfAAAAAgAAAAIAAAAEGhlYWQAAAOEAAAANgAAADYAQ88baGhlYQAAA7wAAAAkAAAAJAMHAelobXR4AAAD4AAAACAAAAAgBLgAEm1heHAAAAQAAAAABgAAAAYACFAAbmFtZQAABAgAAAFFAAABRVcZpu5wb3N0AAAFUAAAACAAAAAgAAMAAAEABAQAAQEBCGljb21vb24AAQIAAQA6+BwC+BsD+BgEHgoAGVP/i4seCgAZU/+LiwwHi2v4lPh0BR0AAACIDx0AAACNER0AAAAJHQAAAdASAAkBAQgPERMWGyAlKmljb21vb25pY29tb29udTB1MXUyMHVGMEQ3dUYwRDh1RjBEOXVGMERBAAACAYkABgAIAgABAAQABwAKAA0AVgCfAOgBL/yUDvyUDvyUDvuUDvtvi/emFYuQjZCOjo+Pj42Qiwj3lIsFkIuQiY6Hj4iNhouGi4aJh4eHCPsU+xQFiIiGiYaLhouHjYeOCPsU9xQFiI+Jj4uQCA77b4v3FBWLkI2Pjo8I9xT3FAWPjo+NkIuQi5CJjogI9xT7FAWPh42Hi4aLhomHh4eIiIaJhosI+5SLBYaLh42HjoiPiY+LkAgO+92d928Vi5CNkI+OCPcU9xQFjo+QjZCLkIuPiY6Hj4iNhouGCIv7lAWLhomHh4iIh4eJhouGi4aNiI8I+xT3FAWHjomPi5AIDvvdi+YVi/eUBYuQjZCOjo+Pj42Qi5CLkImOhwj3FPsUBY+IjYaLhouGiYeHiAj7FPsUBYiHhomGi4aLh42Hj4iOiY+LkAgO+JQU+JQViwwKAAAAAAMCAAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA8NoB4P/g/+AB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDw2v/9//8AAAAAACDw1//9//8AAf/jDy0AAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAABAAA5emozXw889QALAgAAAAAA0ABHWAAAAADQAEdYAAAAAAElAW4AAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAASUAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAASUAAAElAAAAtwASALcAAAAAUAAACAAAAAAADgCuAAEAAAAAAAEADgAAAAEAAAAAAAIADgBHAAEAAAAAAAMADgAkAAEAAAAAAAQADgBVAAEAAAAAAAUAFgAOAAEAAAAAAAYABwAyAAEAAAAAAAoANABjAAMAAQQJAAEADgAAAAMAAQQJAAIADgBHAAMAAQQJAAMADgAkAAMAAQQJAAQADgBVAAMAAQQJAAUAFgAOAAMAAQQJAAYADgA5AAMAAQQJAAoANABjAGkAYwBvAG0AbwBvAG4AVgBlAHIAcwBpAG8AbgAgADEALgAwAGkAYwBvAG0AbwBvAG5pY29tb29uAGkAYwBvAG0AbwBvAG4AUgBlAGcAdQBsAGEAcgBpAGMAbwBtAG8AbwBuAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('woff');
+  font-family: "Dropdown";
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMggjB5AAAAC8AAAAYGNtYXAPfuIIAAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5Zjo82LgAAAFwAAABVGhlYWQAQ88bAAACxAAAADZoaGVhAwcB6QAAAvwAAAAkaG10eAS4ABIAAAMgAAAAIGxvY2EBNgDeAAADQAAAABJtYXhwAAoAFgAAA1QAAAAgbmFtZVcZpu4AAAN0AAABRXBvc3QAAwAAAAAEvAAAACAAAwIAAZAABQAAAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADw2gHg/+D/4AHgACAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIPDa//3//wAAAAAAIPDX//3//wAB/+MPLQADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAIABJQElABMAABM0NzY3BTYXFhUUDwEGJwYvASY1AAUGBwEACAUGBoAFCAcGgAUBEgcGBQEBAQcECQYHfwYBAQZ/BwYAAQAAAG4BJQESABMAADc0PwE2MzIfARYVFAcGIyEiJyY1AAWABgcIBYAGBgUI/wAHBgWABwaABQWABgcHBgUFBgcAAAABABIASQC3AW4AEwAANzQ/ATYXNhcWHQEUBwYnBi8BJjUSBoAFCAcFBgYFBwgFgAbbBwZ/BwEBBwQJ/wgEBwEBB38GBgAAAAABAAAASQClAW4AEwAANxE0NzYzMh8BFhUUDwEGIyInJjUABQYHCAWABgaABQgHBgVbAQAIBQYGgAUIBwWABgYFBwAAAAEAAAABAADZuaKOXw889QALAgAAAAAA0ABHWAAAAADQAEdYAAAAAAElAW4AAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAASUAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAASUAAAElAAAAtwASALcAAAAAAAAACgAUAB4AQgBkAIgAqgAAAAEAAAAIABQAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAOAAAAAQAAAAAAAgAOAEcAAQAAAAAAAwAOACQAAQAAAAAABAAOAFUAAQAAAAAABQAWAA4AAQAAAAAABgAHADIAAQAAAAAACgA0AGMAAwABBAkAAQAOAAAAAwABBAkAAgAOAEcAAwABBAkAAwAOACQAAwABBAkABAAOAFUAAwABBAkABQAWAA4AAwABBAkABgAOADkAAwABBAkACgA0AGMAaQBjAG8AbQBvAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAaQBjAG8AbQBvAG8Abmljb21vb24AaQBjAG8AbQBvAG8AbgBSAGUAZwB1AGwAYQByAGkAYwBvAG0AbwBvAG4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=)
+      format("truetype"),
+    url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAVwAAoAAAAABSgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAAdkAAAHZLDXE/09TLzIAAALQAAAAYAAAAGAIIweQY21hcAAAAzAAAABMAAAATA9+4ghnYXNwAAADfAAAAAgAAAAIAAAAEGhlYWQAAAOEAAAANgAAADYAQ88baGhlYQAAA7wAAAAkAAAAJAMHAelobXR4AAAD4AAAACAAAAAgBLgAEm1heHAAAAQAAAAABgAAAAYACFAAbmFtZQAABAgAAAFFAAABRVcZpu5wb3N0AAAFUAAAACAAAAAgAAMAAAEABAQAAQEBCGljb21vb24AAQIAAQA6+BwC+BsD+BgEHgoAGVP/i4seCgAZU/+LiwwHi2v4lPh0BR0AAACIDx0AAACNER0AAAAJHQAAAdASAAkBAQgPERMWGyAlKmljb21vb25pY29tb29udTB1MXUyMHVGMEQ3dUYwRDh1RjBEOXVGMERBAAACAYkABgAIAgABAAQABwAKAA0AVgCfAOgBL/yUDvyUDvyUDvuUDvtvi/emFYuQjZCOjo+Pj42Qiwj3lIsFkIuQiY6Hj4iNhouGi4aJh4eHCPsU+xQFiIiGiYaLhouHjYeOCPsU9xQFiI+Jj4uQCA77b4v3FBWLkI2Pjo8I9xT3FAWPjo+NkIuQi5CJjogI9xT7FAWPh42Hi4aLhomHh4eIiIaJhosI+5SLBYaLh42HjoiPiY+LkAgO+92d928Vi5CNkI+OCPcU9xQFjo+QjZCLkIuPiY6Hj4iNhouGCIv7lAWLhomHh4iIh4eJhouGi4aNiI8I+xT3FAWHjomPi5AIDvvdi+YVi/eUBYuQjZCOjo+Pj42Qi5CLkImOhwj3FPsUBY+IjYaLhouGiYeHiAj7FPsUBYiHhomGi4aLh42Hj4iOiY+LkAgO+JQU+JQViwwKAAAAAAMCAAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA8NoB4P/g/+AB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDw2v/9//8AAAAAACDw1//9//8AAf/jDy0AAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAABAAA5emozXw889QALAgAAAAAA0ABHWAAAAADQAEdYAAAAAAElAW4AAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAASUAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAASUAAAElAAAAtwASALcAAAAAUAAACAAAAAAADgCuAAEAAAAAAAEADgAAAAEAAAAAAAIADgBHAAEAAAAAAAMADgAkAAEAAAAAAAQADgBVAAEAAAAAAAUAFgAOAAEAAAAAAAYABwAyAAEAAAAAAAoANABjAAMAAQQJAAEADgAAAAMAAQQJAAIADgBHAAMAAQQJAAMADgAkAAMAAQQJAAQADgBVAAMAAQQJAAUAFgAOAAMAAQQJAAYADgA5AAMAAQQJAAoANABjAGkAYwBvAG0AbwBvAG4AVgBlAHIAcwBpAG8AbgAgADEALgAwAGkAYwBvAG0AbwBvAG5pY29tb29uAGkAYwBvAG0AbwBvAG4AUgBlAGcAdQBsAGEAcgBpAGMAbwBtAG8AbwBuAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }
 .ui.dropdown > .dropdown.icon {
-  font-family: 'Dropdown';
+  font-family: "Dropdown";
   line-height: 1;
   height: 1em;
   width: 1.23em;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   font-weight: normal;
   font-style: normal;
   text-align: center;
@@ -1047,12 +1026,12 @@ select.ui.dropdown {
   width: auto;
 }
 .ui.dropdown > .dropdown.icon:before {
-  content: '\f0d7';
+  content: "\f0d7";
 }
 
 /* Sub Menu */
 .ui.dropdown .menu .item .dropdown.icon:before {
-  content: '\f0da' /*rtl:'\f0d9'*/;
+  content: "\f0da" /*rtl:'\f0d9'*/;
 }
 .ui.dropdown .item .left.dropdown.icon:before,
 .ui.dropdown .left.menu .item .dropdown.icon:before {
@@ -1078,8 +1057,6 @@ select.ui.dropdown {
 }
 */
 
-
 /*******************************
         User Overrides
 *******************************/
-

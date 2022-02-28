@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -9,12 +9,9 @@
  *
  */
 
-
-
 /*******************************
             Standard
 *******************************/
-
 
 /*--------------
       Item
@@ -32,8 +29,8 @@
   border-radius: 0rem;
   box-shadow: none;
   -webkit-transition: box-shadow 0.2s ease;
-          transition: box-shadow 0.2s ease;
-  z-index: '';
+  transition: box-shadow 0.2s ease;
+  z-index: "";
 }
 .ui.items > .item a {
   cursor: pointer;
@@ -62,7 +59,7 @@
 }
 .ui.items > .item:after {
   display: block;
-  content: ' ';
+  content: " ";
   height: 0px;
   clear: both;
   overflow: hidden;
@@ -85,7 +82,7 @@
   float: none;
   margin: 0em;
   padding: 0em;
-  max-height: '';
+  max-height: "";
   vertical-align: top;
 }
 .ui.items > .item > .image > img {
@@ -115,7 +112,7 @@
 }
 .ui.items > .item > .content:after {
   display: block;
-  content: ' ';
+  content: " ";
   height: 0px;
   clear: both;
   overflow: hidden;
@@ -131,7 +128,7 @@
 .ui.items > .item > .content > .header {
   display: inline-block;
   margin: -0.165em 0em 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
 }
@@ -215,15 +212,14 @@
       Links
 ---------------*/
 
-
 /* Generic */
 .ui.items > .item > .content a:not(.ui) {
-  color: '';
+  color: "";
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 .ui.items > .item > .content a:not(.ui):hover {
-  color: '';
+  color: "";
 }
 
 /* Header */
@@ -246,16 +242,14 @@
      Labels
 ---------------*/
 
-
 /*-----Star----- */
-
 
 /* Icon */
 .ui.items > .item > .content .favorite.icon {
   cursor: pointer;
   opacity: 0.75;
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 .ui.items > .item > .content .favorite.icon:hover {
   opacity: 1;
@@ -267,13 +261,12 @@
 
 /*-----Like----- */
 
-
 /* Icon */
 .ui.items > .item > .content .like.icon {
   cursor: pointer;
   opacity: 0.75;
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 .ui.items > .item > .content .like.icon:hover {
   opacity: 1;
@@ -299,7 +292,7 @@
   color: rgba(0, 0, 0, 0.4);
   box-shadow: none;
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
   border-top: none;
 }
 .ui.items > .item .extra > * {
@@ -310,18 +303,16 @@
 }
 .ui.items > .item .extra:after {
   display: block;
-  content: ' ';
+  content: " ";
   height: 0px;
   clear: both;
   overflow: hidden;
   visibility: hidden;
 }
 
-
 /*******************************
           Responsive
 *******************************/
-
 
 /* Default Image Width */
 .ui.items > .item > .image:not(.ui) {
@@ -364,11 +355,9 @@
   }
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
        Aligned
@@ -445,14 +434,10 @@
   font-size: 1em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
     User Variable Overrides
 *******************************/
-

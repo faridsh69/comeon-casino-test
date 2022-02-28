@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
            Breadcrumb
@@ -27,11 +25,9 @@
   margin-bottom: 0em;
 }
 
-
 /*******************************
           Content
 *******************************/
-
 
 /* Divider */
 .ui.breadcrumb .divider {
@@ -73,7 +69,6 @@
   padding: 0.5em 1em;
 }
 
-
 /*******************************
             States
 *******************************/
@@ -81,7 +76,6 @@
 .ui.breadcrumb .active.section {
   font-weight: bold;
 }
-
 
 /*******************************
            Variations
@@ -112,14 +106,10 @@
   font-size: 1.5em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

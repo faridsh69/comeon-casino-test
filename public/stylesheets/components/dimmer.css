@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
             Dimmer
@@ -31,15 +29,15 @@
   opacity: 0;
   line-height: 1;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
   -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-transition: background-color 0.5s linear;
-          transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   will-change: opacity;
   z-index: 1000;
 }
@@ -50,9 +48,9 @@
   height: 100%;
   display: table;
   -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 .ui.dimmer > .content > div {
   display: table-cell;
@@ -64,7 +62,6 @@
 .ui.segment > .ui.dimmer {
   border-radius: inherit !important;
 }
-
 
 /*******************************
             States
@@ -85,11 +82,9 @@
   height: 0 !important;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
       Page
@@ -97,13 +92,13 @@
 
 .ui.page.dimmer {
   position: fixed;
-  -webkit-transform-style: '';
-          transform-style: '';
+  -webkit-transform-style: "";
+  transform-style: "";
   -webkit-perspective: 2000px;
-          perspective: 2000px;
+  perspective: 2000px;
   -webkit-transform-origin: center center;
-      -ms-transform-origin: center center;
-          transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
 }
 body.animating.in.dimmable,
 body.dimmed.dimmable {
@@ -148,7 +143,6 @@ body.dimmed.dimmable > :not(.dimmer) {
      Simple
 ---------------*/
 
-
 /* Displays without javascript */
 .ui.simple.dimmer {
   display: block;
@@ -174,14 +168,10 @@ body.dimmed.dimmable > :not(.dimmer) {
   background: rgba(255, 255, 255, 0.85);
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
         User Overrides
 *******************************/
-

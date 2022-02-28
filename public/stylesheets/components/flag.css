@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -20,18 +20,17 @@ i.flag:not(.icon) {
   speak: none;
   font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 i.flag:not(.icon):before {
   display: inline-block;
-  content: '';
+  content: "";
   background: url("../themes/default/assets/images/flags.png") no-repeat 0px 0px;
   width: 16px;
   height: 11px;
 }
 
 /* Flag Sprite Based On http://www.famfamfam.com/lab/icons/flags/ */
-
 
 /*******************************
          Theme Overrides
@@ -1010,8 +1009,6 @@ i.flag.zimbabwe:before {
   background-position: -108px -390px;
 }
 
-
 /*******************************
          Site Overrides
 *******************************/
-

@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -9,12 +9,9 @@
  *
  */
 
-
-
 /*******************************
             Standard
 *******************************/
-
 
 /*--------------
     Comments
@@ -184,7 +181,6 @@
   height: 12em;
 }
 
-
 /*******************************
             State
 *******************************/
@@ -195,11 +191,9 @@
   display: none;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------------
         Threaded
@@ -222,9 +216,9 @@
   right: 0px;
   left: auto;
   -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
   -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 .ui.minimal.comments .comment > .content:hover > .actions {
   opacity: 1;
@@ -247,14 +241,10 @@
   font-size: 1.2em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
     User Variable Overrides
 *******************************/
-

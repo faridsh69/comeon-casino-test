@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -9,8 +9,6 @@
  *
  */
 
-
-
 /*******************************
               Shape
 *******************************/
@@ -19,27 +17,26 @@
   position: relative;
   display: inline-block;
   -webkit-perspective: 2000px;
-          perspective: 2000px;
+  perspective: 2000px;
 }
 .ui.shape .sides {
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .ui.shape .side {
   opacity: 1;
   width: 100%;
   margin: 0em !important;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .ui.shape .side {
   display: none;
 }
 .ui.shape .side > * {
   -webkit-backface-visibility: visible !important;
-          backface-visibility: visible !important;
+  backface-visibility: visible !important;
 }
-
 
 /*******************************
              Types
@@ -59,16 +56,15 @@
   display: table;
   text-align: center;
   -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 .ui.cube.shape .side > .content > div {
   display: table-cell;
   vertical-align: middle;
   font-size: 2em;
 }
-
 
 /*******************************
           Variations
@@ -84,11 +80,9 @@
   white-space: normal;
 }
 
-
 /*******************************
              States
 *******************************/
-
 
 /*--------------
     Loading
@@ -120,18 +114,18 @@
 
 .ui.shape.animating {
   -webkit-transition: all 0.6s ease-in-out;
-          transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 .ui.shape.animating .sides {
   position: absolute;
 }
 .ui.shape.animating .sides {
   -webkit-transition: all 0.6s ease-in-out;
-          transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 .ui.shape.animating .side {
   -webkit-transition: opacity 0.6s ease-in-out;
-          transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
 }
 
 /*--------------
@@ -142,14 +136,10 @@
   display: block;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
         User Overrides
 *******************************/
-

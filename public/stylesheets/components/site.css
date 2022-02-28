@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,9 +8,7 @@
  * http://opensource.org/licenses/MIT
  *
  */
-@import 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin';
-
-
+@import "https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin";
 
 /*******************************
              Page
@@ -28,13 +26,12 @@ body {
   padding: 0px;
   min-width: 278px;
   background: #f7f7f7;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.33;
   color: rgba(0, 0, 0, 0.8);
   font-smoothing: antialiased;
 }
-
 
 /*******************************
              Headers
@@ -45,10 +42,10 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   line-height: 1.33em;
-  margin: -webkit-calc(2rem -  0.165em ) 0em 1rem;
-  margin: calc(2rem -  0.165em ) 0em 1rem;
+  margin: -webkit-calc(2rem - 0.165em) 0em 1rem;
+  margin: calc(2rem - 0.165em) 0em 1rem;
   font-weight: bold;
   padding: 0em;
 }
@@ -68,7 +65,6 @@ h4 {
 h5 {
   font-size: 1rem;
 }
-
 
 /*******************************
              Text
@@ -97,11 +93,9 @@ a:hover {
   color: #00b2f3;
 }
 
-
 /*******************************
           Highlighting
 *******************************/
-
 
 /* Site */
 ::-webkit-selection {
@@ -134,14 +128,10 @@ input::selection {
   color: rgba(0, 0, 0, 0.8);
 }
 
-
 /*******************************
         Global Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

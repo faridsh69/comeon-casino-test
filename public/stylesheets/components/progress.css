@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -8,8 +8,6 @@
  * http://opensource.org/licenses/MIT
  *
  */
-
-
 
 /*******************************
             Progress
@@ -110,11 +108,9 @@
   color: #356e36;
 }
 
-
 /*******************************
             Content
 *******************************/
-
 
 /* Activity Bar */
 .ui.progress .bar {
@@ -126,7 +122,7 @@
   background: #888888;
   border-radius: 0.2857rem;
   -webkit-transition: width 0.3s ease, background-color 0.3s ease;
-          transition: width 0.3s ease, background-color 0.3s ease;
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 /* Percent Complete */
@@ -161,14 +157,12 @@
   margin-top: 0.2em;
   text-align: center;
   -webkit-transition: color 0.4s ease;
-          transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
-
 
 /*******************************
              States
 *******************************/
-
 
 /*--------------
      Success
@@ -180,7 +174,7 @@
 .ui.progress.success .bar,
 .ui.progress.success .bar::after {
   -webkit-animation: none !important;
-          animation: none !important;
+  animation: none !important;
 }
 .ui.progress.success > .label {
   color: #356e36;
@@ -196,7 +190,7 @@
 .ui.progress.warning .bar,
 .ui.progress.warning .bar::after {
   -webkit-animation: none !important;
-          animation: none !important;
+  animation: none !important;
 }
 .ui.progress.warning > .label {
   color: #825c01;
@@ -212,7 +206,7 @@
 .ui.progress.error .bar,
 .ui.progress.error .bar::after {
   -webkit-animation: none !important;
-          animation: none !important;
+  animation: none !important;
 }
 .ui.progress.error > .label {
   color: #912d2b;
@@ -227,7 +221,7 @@
   min-width: 2em;
 }
 .ui.active.progress .bar::after {
-  content: '';
+  content: "";
   opacity: 0;
   position: absolute;
   top: 0px;
@@ -237,10 +231,9 @@
   background: #ffffff;
   border-radius: 0.2857rem;
   -webkit-animation: progress-active 2s ease infinite;
-          animation: progress-active 2s ease infinite;
+  animation: progress-active 2s ease infinite;
 }
 @-webkit-keyframes progress-active {
-
   0% {
     opacity: 0.3;
     width: 0;
@@ -272,14 +265,12 @@
 .ui.disabled.progress .bar,
 .ui.disabled.progress .bar::after {
   -webkit-animation: none !important;
-          animation: none !important;
+  animation: none !important;
 }
-
 
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
     Inverted
@@ -311,7 +302,6 @@
 /*--------------
     Attached
 ---------------*/
-
 
 /* bottom attached */
 .ui.progress.attached {
@@ -436,14 +426,10 @@
   height: 3.5em;
 }
 
-
 /*******************************
             Progress
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

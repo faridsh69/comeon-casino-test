@@ -1,4 +1,4 @@
- /*
+/*
  * # Semantic UI - 1.8.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
@@ -9,20 +9,17 @@
  *
  */
 
-
-
 /*******************************
             Header
 *******************************/
 
-
 /* Standard */
 .ui.header {
   border: none;
-  margin: -webkit-calc(2rem -  0.165em ) 0em 1rem;
-  margin: calc(2rem -  0.165em ) 0em 1rem;
+  margin: -webkit-calc(2rem - 0.165em) 0em 1rem;
+  margin: calc(2rem - 0.165em) 0em 1rem;
   padding: 0em 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.33em;
   text-transform: none;
@@ -97,11 +94,9 @@
   margin-top: 0em;
 }
 
-
 /*******************************
             Types
 *******************************/
-
 
 /*--------------
      Page
@@ -188,7 +183,7 @@ h5.ui.header .sub.header {
   margin: 2rem 0em 1rem;
 }
 .ui.icon.header:after {
-  content: '';
+  content: "";
   display: block;
   height: 0px;
   clear: both;
@@ -225,7 +220,6 @@ h5.ui.header .sub.header {
   display: block;
 }
 
-
 /*******************************
             States
 *******************************/
@@ -234,11 +228,9 @@ h5.ui.header .sub.header {
   opacity: 0.3;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
        Colors
@@ -428,7 +420,7 @@ a.ui.inverted.yellow.header:hover {
 }
 .ui.justified.header:after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 100%;
 }
 
@@ -559,14 +551,10 @@ a.ui.inverted.yellow.header:hover {
   font-size: 1.28em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-
