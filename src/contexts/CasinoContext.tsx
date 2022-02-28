@@ -7,37 +7,61 @@ import GameInterface from "../interfaces/game/GameInterface";
 
 const CasinoContext = React.createContext<CasinoContextInterface>({
   filteredGames: [],
-  filterByName: (name: string) => {},
   setDatabaseGames: (games: GameInterface[]) => {},
+  filterByName: (name: string) => {},
+  filterByCategory: (categoryId: number) => {},
 });
 
 export function CasinoContextProvider(
   props: CasinoContextProviderPropsInterface
 ): JSX.Element {
-  const [games, setGames] = React.useState<CasinoGamesStateInterface>({
+  const [state, setState] = React.useState<CasinoGamesStateInterface>({
     databaseGames: [],
     filteredGames: [],
+    filterName: "",
+    filterCategoryId: 0,
   });
 
-  const { databaseGames, filteredGames } = games;
+  const { databaseGames, filteredGames, filterName, filterCategoryId } = state;
 
-  const filterByName = (name: string) => {
-    const filteredGames = [...databaseGames].filter((item) => {
-      if (item.name.toLowerCase().includes(name.toLowerCase())) {
+  const filterGames = (
+    games: GameInterface[],
+    name: string,
+    categoryId: number
+  ) => {
+    return games.filter((item) => {
+      if (
+        item.name.toLowerCase().includes(name.toLowerCase()) &&
+        item.categoryIds.includes(categoryId)
+      ) {
         return item;
       }
     });
-    setGames({ ...games, filteredGames });
   };
 
   const setDatabaseGames = (games: GameInterface[]) => {
-    setGames({ databaseGames: games, filteredGames: games });
+    const filteredGames = filterGames(games, filterName, filterCategoryId);
+
+    setState({ ...state, databaseGames: games, filteredGames });
+  };
+
+  const filterByName = (name: string) => {
+    const filteredGames = filterGames(databaseGames, name, filterCategoryId);
+
+    setState({ ...state, filterName: name, filteredGames });
+  };
+
+  const filterByCategory = (categoryId: number) => {
+    const filteredGames = filterGames(databaseGames, filterName, categoryId);
+
+    setState({ ...state, filterCategoryId: categoryId, filteredGames });
   };
 
   const contextValue: CasinoContextInterface = {
     filteredGames,
-    filterByName,
     setDatabaseGames,
+    filterByName,
+    filterByCategory,
   };
 
   return <CasinoContext.Provider value={contextValue} {...props} />;
@@ -53,85 +77,3 @@ export default function useCasinoContext(): CasinoContextInterface {
 
   return context;
 }
-
-// function casinoReducer(state: any, action: any) {
-//   switch (action.type) {
-//     case "pending": {
-//       return { loading: true, message: "", games: [], gameRows: [] };
-//     }
-//   }
-// }
-
-// function loginReducer(
-//   state: LoginPageStateInterface,
-//   action: LoginPageDispatchInterface
-// ): LoginPageStateInterface {
-//   switch (action.type) {
-//     case "pending": {
-//       return { loading: true, message: "" };
-//     }
-//     case "rejected": {
-//       return { loading: false, message: action.message };
-//     }
-//     default: {
-//       throw new Error(`Unhandled action type: ${action.type}`);
-//     }
-//   }
-// }
-
-// function casinoReducer(
-//   state: CasinoPageStateInterface,
-//   action: CasinoPageDispatchInterface
-// ): CasinoPageStateInterface {
-//   switch (action.type) {
-//     case "pending": {
-//       return { loading: true, message: "", games: [], gameRows: [] };
-//     }
-//     case "rejected": {
-//       return {
-//         loading: false,
-//         message: action.message,
-//         games: [],
-//         gameRows: [],
-//       };
-//     }
-//     case "resolved": {
-//       return {
-//         loading: false,
-//         message: "",
-//         games: action.games,
-//         // @todo in bala bayad filter shode ro pass bedi
-//         gameRows: action.games,
-//       };
-//     }
-//     case "filterSearch": {
-//       const filteredItems = [...state.games].filter((item) => {
-//         if (
-//           item.name.toLowerCase().includes(action.filteredWord.toLowerCase())
-//         ) {
-//           return item;
-//         }
-//       });
-//       return {
-//         ...state,
-//         gameRows: filteredItems,
-//       };
-//     }
-//     case "filterCategory": {
-//       const filteredItems = [...state.games].filter((item) => {
-//         if (
-//           item.name.toLowerCase().includes(action.filteredWord.toLowerCase())
-//         ) {
-//           return item;
-//         }
-//       });
-//       return {
-//         ...state,
-//         gameRows: filteredItems,
-//       };
-//     }
-//     default: {
-//       throw new Error(`Unhandled action type: ${action.type}`);
-//     }
-//   }
-// }

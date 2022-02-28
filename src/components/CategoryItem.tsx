@@ -1,17 +1,14 @@
 import CategoryItemPropsInterface from "../interfaces/category/CategoryItemPropsInterface";
+import useCasinoContext from "../contexts/CasinoContext";
 
 export default function CategoryItem(
   props: CategoryItemPropsInterface
 ): JSX.Element {
+  const casinoContext = useCasinoContext();
   const { category } = props;
 
   const handleClick = (categoryId: number) => {
-    // casinoDispatch({
-    //   type: "filterSearch",
-    //   message,
-    //   games,
-    //   filteredWord: target.value,
-    // });
+    casinoContext.filterByCategory(categoryId);
   };
 
   return (

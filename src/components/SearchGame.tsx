@@ -8,12 +8,6 @@ export default function SearchGame(): JSX.Element {
   const handleChange = (event: React.SyntheticEvent) => {
     const target = event.target as HTMLTextAreaElement;
     casinoContext.filterByName(target.value);
-    // casinoDispatch({
-    //   type: "filterSearch",
-    //   message,
-    //   games,
-    //   filteredWord: target.value,
-    // });
   };
 
   return (
