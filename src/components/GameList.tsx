@@ -21,11 +21,11 @@ export default function GameList(): JSX.Element {
     getGames(abortController)
       .then((response: GameInterface[]) => {
         setDatabaseGames(Array.isArray(response) ? response : []);
-        setState({ ...state, loading: false });
+        setState({ errorMessage: "", loading: false });
       })
       .catch((error) => {
         if (isMounted) {
-          setState({ ...state, errorMessage: error.message, loading: false });
+          setState({ errorMessage: error.message, loading: false });
         }
       });
 

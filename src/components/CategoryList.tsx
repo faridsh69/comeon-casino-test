@@ -19,11 +19,15 @@ export default function CategoryList(): JSX.Element {
     const abortController = new AbortController();
     getCategories(abortController)
       .then((response: CategoryInterface[]) => {
-        setState({ ...state, categories: response, loading: false });
+        setState({ errorMessage: "", categories: response, loading: false });
       })
       .catch((error) => {
         if (isMounted) {
-          setState({ ...state, errorMessage: error.message, loading: false });
+          setState({
+            errorMessage: error.message,
+            categories: [],
+            loading: false,
+          });
         }
       });
 
