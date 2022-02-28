@@ -8,12 +8,13 @@ export default function AuthMiddleware(
 ): JSX.Element {
   const navigate = useNavigate();
   const auth = useAuth();
+  const { isUserLoggedIn } = auth;
 
   React.useEffect(() => {
-    if (!auth.isUserLoggedIn) {
+    if (!isUserLoggedIn) {
       return navigate("/login");
     }
   }, []);
 
-  return <>{auth.isUserLoggedIn ? props.children : ""}</>;
+  return <>{isUserLoggedIn ? props.children : ""}</>;
 }

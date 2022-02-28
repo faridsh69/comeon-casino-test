@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import MetaTags from "../components/MetaTags";
 
 import { useAuth } from "../contexts/AuthContext";
 
@@ -7,6 +8,7 @@ export default function Home(): JSX.Element {
 
   return (
     <>
+      <MetaTags title="Home | Come On Casino" />
       <h1>Home! Come On test application</h1>
       <h5>All users (guests, authenticated) can see this path:</h5>
 

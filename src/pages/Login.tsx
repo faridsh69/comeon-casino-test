@@ -9,6 +9,7 @@ import LoginFormTargetInterface from "../interfaces/auth/LoginFormTargetInterfac
 import LoginFormDataInterface from "../interfaces/auth/LoginFormDataInterface";
 import LoginFormResponseInterface from "../interfaces/auth/LoginFormResponseInterface";
 import Loading from "../components/Loading";
+import MetaTags from "../components/MetaTags";
 
 function loginReducer(
   state: LoginPageStateInterface,
@@ -70,45 +71,52 @@ export default function Login() {
   };
 
   return (
-    <div className="login">
-      <div className="ui grid centered">
-        <form onSubmit={handleSubmit}>
-          <div className="fields">
-            <div className="required field">
-              <div className="ui icon input">
-                <input type="text" name="username" placeholder="Username" />
-                <i className="user icon"></i>
+    <>
+      <MetaTags title="Login | Come On Casino" />
+      <div className="login">
+        <div className="ui grid centered">
+          <form onSubmit={handleSubmit}>
+            <div className="fields">
+              <div className="required field">
+                <div className="ui icon input">
+                  <input type="text" name="username" placeholder="Username" />
+                  <i className="user icon"></i>
+                </div>
+              </div>
+              <div className="required field">
+                <div className="ui icon input">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                  <i className="lock icon"></i>
+                </div>
+              </div>
+              <div className="field">
+                <div className="ui icon input">
+                  {loading ? (
+                    <Loading />
+                  ) : (
+                    <>
+                      <input type="submit" value="Login" />
+                      <i className="right chevron icon"></i>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
-            <div className="required field">
-              <div className="ui icon input">
-                <input type="password" name="password" placeholder="Password" />
-                <i className="lock icon"></i>
-              </div>
-            </div>
-            <div className="field">
-              <div className="ui icon input">
-                {loading ? (
-                  <Loading />
-                ) : (
-                  <>
-                    <input type="submit" value="Login" />
-                    <i className="right chevron icon"></i>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-      <br />
-      {message ? (
-        <div className="ui warning message">
-          <div className="header">{message}</div>
+          </form>
         </div>
-      ) : (
-        ""
-      )}
-    </div>
+        <br />
+        {message ? (
+          <div className="ui warning message">
+            <div className="header">{message}</div>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+    </>
   );
 }
