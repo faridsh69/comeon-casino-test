@@ -5,7 +5,7 @@ import Alert from "./Alert";
 import GameItem from "./GameItem";
 import GameInterface from "../interfaces/game/GameInterface";
 import GameListStateInterface from "../interfaces/game/GameListStateInterface";
-import useCasinoContext from "../contexts/CasinoContext";
+import { useCasinoContext } from "../contexts/CasinoContext";
 
 export default function GameList(): JSX.Element {
   const { filteredGames, setDatabaseGames } = useCasinoContext();

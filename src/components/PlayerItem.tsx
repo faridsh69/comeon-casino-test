@@ -1,4 +1,4 @@
-import useAuth from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 
 export default function PlayerItem(): JSX.Element {
   const user = useAuth().user;

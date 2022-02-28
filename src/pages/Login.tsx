@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { postLogin } from "../services/AuthService";
-import useAuth from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 import LoginPageStateInterface from "../interfaces/auth/LoginPageStateInterface";
 import LoginPageDispatchInterface from "../interfaces/auth/LoginPageDispatchInterface";
 import LoginFormTargetInterface from "../interfaces/auth/LoginFormTargetInterface";

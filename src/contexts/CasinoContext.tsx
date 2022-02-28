@@ -69,7 +69,7 @@ export function CasinoContextProvider(
   return <CasinoContext.Provider value={contextValue} {...props} />;
 }
 
-export default function useCasinoContext(): CasinoContextInterface {
+export function useCasinoContext(): CasinoContextInterface {
   const context = React.useContext<CasinoContextInterface>(CasinoContext);
   if (!context) {
     throw new Error(

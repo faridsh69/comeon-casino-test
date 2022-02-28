@@ -45,7 +45,7 @@ export function AuthProvider(props: AuthProviderPropsInterface): JSX.Element {
   return <AuthContext.Provider value={contextValue} {...props} />;
 }
 
-export default function useAuth(): AuthContextInterface {
+export function useAuth(): AuthContextInterface {
   const context = React.useContext<AuthContextInterface>(AuthContext);
   if (!context) {
     throw new Error("useAuth must be used within a AuthProvider");

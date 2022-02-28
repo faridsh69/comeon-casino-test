@@ -1,6 +1,6 @@
 import React from "react";
 
-import useCasinoContext from "../contexts/CasinoContext";
+import { useCasinoContext } from "../contexts/CasinoContext";
 
 export default function SearchGame(): JSX.Element {
   const { filterByName, filterName } = useCasinoContext();

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import useAuth from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 import GuestMiddlewarePropsInterface from "../interfaces/auth/GuestMiddlewarePropsInterface";
 
 export default function GuestMiddleware(

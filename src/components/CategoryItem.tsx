@@ -1,5 +1,5 @@
 import CategoryItemPropsInterface from "../interfaces/category/CategoryItemPropsInterface";
-import useCasinoContext from "../contexts/CasinoContext";
+import { useCasinoContext } from "../contexts/CasinoContext";
 
 export default function CategoryItem(
   props: CategoryItemPropsInterface
