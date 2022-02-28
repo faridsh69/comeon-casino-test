@@ -1,6 +1,6 @@
 export default interface RouteItemInterface {
   name: string;
   path: string;
-  component: () => JSX.Element;
+  component: React.FC;
   middlware: "auth" | "guest" | null;
 }

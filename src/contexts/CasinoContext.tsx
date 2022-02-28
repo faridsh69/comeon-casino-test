@@ -1,7 +1,6 @@
 import React from "react";
 
 import CasinoContextInterface from "../interfaces/casino/CasinoContextInterface";
-import CasinoContextProviderPropsInterface from "../interfaces/casino/CasinoContextProviderPropsInterface";
 import CasinoContextStateInterface from "../interfaces/casino/CasinoContextStateInterface";
 import GameInterface from "../interfaces/game/GameInterface";
 
@@ -14,7 +13,7 @@ const CasinoContext = React.createContext<CasinoContextInterface>({
 });
 
 export function CasinoContextProvider(
-  props: CasinoContextProviderPropsInterface
+  props: React.PropsWithChildren<{}>
 ): JSX.Element {
   const [state, setState] = React.useState<CasinoContextStateInterface>({
     databaseGames: [],
@@ -66,7 +65,11 @@ export function CasinoContextProvider(
     filterByCategory,
   };
 
-  return <CasinoContext.Provider value={contextValue} {...props} />;
+  return (
+    <CasinoContext.Provider value={contextValue}>
+      {props.children}
+    </CasinoContext.Provider>
+  );
 }
 
 export function useCasinoContext(): CasinoContextInterface {

@@ -1,6 +1,5 @@
 import React from "react";
 import AuthContextInterface from "../interfaces/auth/AuthContextInterface";
-import AuthProviderPropsInterface from "../interfaces/auth/AuthProviderPropsInterface";
 import UserInterface from "../interfaces/auth/UserInterface";
 
 const guestUser: UserInterface = {
@@ -18,7 +17,7 @@ const AuthContext = React.createContext<AuthContextInterface>({
   logout: () => {},
 });
 
-export function AuthProvider(props: AuthProviderPropsInterface): JSX.Element {
+export function AuthProvider(props: React.PropsWithChildren<{}>): JSX.Element {
   const initialUserJson = localStorage.getItem(databaseName);
   const initialUser = initialUserJson ? JSON.parse(initialUserJson) : guestUser;
   const [user, setUser] = React.useState<UserInterface>(initialUser);
@@ -42,7 +41,11 @@ export function AuthProvider(props: AuthProviderPropsInterface): JSX.Element {
     logout,
   };
 
-  return <AuthContext.Provider value={contextValue} {...props} />;
+  return (
+    <AuthContext.Provider value={contextValue}>
+      {props.children}
+    </AuthContext.Provider>
+  );
 }
 
 export function useAuth(): AuthContextInterface {
