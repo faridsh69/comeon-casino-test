@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import useAuth from "../contexts/AuthContext";
 
 export default function PlayerItem(): JSX.Element {
@@ -6,7 +5,6 @@ export default function PlayerItem(): JSX.Element {
 
   return (
     <div className="player item">
-      <Link to="/">Home</Link>
       <img className="ui avatar image" src={user.avatar} alt={user.name} />
       <div className="content">
         <div className="header">

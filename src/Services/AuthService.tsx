@@ -2,38 +2,37 @@ import LoginFormDataInterface from "../interfaces/auth/LoginFormDataInterface";
 import LoginFormResponseInterface from "../interfaces/auth/LoginFormResponseInterface";
 import LogoutFormDataInterface from "../interfaces/auth/LogoutFormDataInterface";
 import LogoutFormResponseInterface from "../interfaces/auth/LogoutFormResponseInterface";
-
-const apiUrl = process.env.REACT_APP_API_URL;
-const headers = {
-  Accept: "application/json",
-  "Content-Type": "application/json",
-};
+import FetchService from "./FetchService";
 
 export async function postLogin(
-  formData: LoginFormDataInterface
+  formData: LoginFormDataInterface,
+  abortController: AbortController
 ): Promise<LoginFormResponseInterface> {
-  const action = "login";
-  const method = "post";
-  const body = JSON.stringify({
-    username: formData.username,
-    password: formData.password,
-  });
+  const response: Response = await FetchService(
+    "login",
+    "post",
+    JSON.stringify({
+      username: formData.username,
+      password: formData.password,
+    }),
+    abortController
+  );
 
-  const res: Response = await fetch(apiUrl + action, { method, headers, body });
-
-  return await res.json();
+  return await response.json();
 }
 
 export async function postLogout(
-  formData: LogoutFormDataInterface
+  formData: LogoutFormDataInterface,
+  abortController: AbortController
 ): Promise<LogoutFormResponseInterface> {
-  const action = "logout";
-  const method = "post";
-  const body = JSON.stringify({
-    username: formData.username,
-  });
+  const response: Response = await FetchService(
+    "logout",
+    "post",
+    JSON.stringify({
+      username: formData.username,
+    }),
+    abortController
+  );
 
-  const res: Response = await fetch(apiUrl + action, { method, headers, body });
-
-  return await res.json();
+  return await response.json();
 }

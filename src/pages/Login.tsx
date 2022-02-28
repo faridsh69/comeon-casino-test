@@ -34,6 +34,13 @@ export default function Login() {
     message: "",
   });
 
+  const abortController = new AbortController();
+  React.useEffect(() => {
+    return () => {
+      abortController.abort();
+    };
+  }, []);
+
   const handleSubmit = (event: React.SyntheticEvent): void => {
     event.preventDefault();
     const target = event.target as typeof event.target &
@@ -43,7 +50,7 @@ export default function Login() {
       password: target.password.value,
     };
     dispatch({ type: "pending", message: "" });
-    postLogin(formData)
+    postLogin(formData, abortController)
       .then((response: LoginFormResponseInterface) => {
         if (response.status === "fail") {
           dispatch({ type: "rejected", message: response.error });

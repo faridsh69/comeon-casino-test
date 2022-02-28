@@ -1,32 +1,29 @@
 import CategoryInterface from "../interfaces/category/CategoryInterface";
 import GameInterface from "../interfaces/game/GameInterface";
-
-const apiUrl = process.env.REACT_APP_API_URL;
+import FetchService from "./FetchService";
 
 export async function getGames(
   abortController: AbortController
 ): Promise<GameInterface[]> {
-  const action = "games";
-  const method = "get";
+  const response: Response = await FetchService(
+    "games",
+    "get",
+    null,
+    abortController
+  );
 
-  const res: Response = await fetch(apiUrl + action, {
-    method,
-    signal: abortController.signal,
-  });
-
-  return await res.json();
+  return await response.json();
 }
 
 export async function getCategories(
   abortController: AbortController
 ): Promise<CategoryInterface[]> {
-  const action = "categories";
-  const method = "get";
+  const response: Response = await FetchService(
+    "categories",
+    "get",
+    null,
+    abortController
+  );
 
-  const res: Response = await fetch(apiUrl + action, {
-    method,
-    signal: abortController.signal,
-  });
-
-  return await res.json();
+  return await response.json();
 }
