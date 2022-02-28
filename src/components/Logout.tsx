@@ -7,6 +7,7 @@ export default function Logout(): JSX.Element {
   const navigate = useNavigate();
 
   const logout = () => {
+    // @send req to server
     auth.logout();
     return navigate("/login");
   };

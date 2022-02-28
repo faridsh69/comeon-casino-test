@@ -4,10 +4,10 @@ import { getCategories } from "../Services/CasinoService";
 import Alert from "./Alert";
 import CategoryItem from "./CategoryItem";
 import CategoryInterface from "../interfaces/category/CategoryInterface";
-import CategoryItemsStateInterface from "../interfaces/category/CategoryItemsStateInterface";
+import CategoryListStateInterface from "../interfaces/category/CategoryListStateInterface";
 
-export default function CategoryItems(): JSX.Element {
-  const [state, setState] = React.useState<CategoryItemsStateInterface>({
+export default function CategoryList(): JSX.Element {
+  const [state, setState] = React.useState<CategoryListStateInterface>({
     loading: true,
     errorMessage: "",
     categories: [],

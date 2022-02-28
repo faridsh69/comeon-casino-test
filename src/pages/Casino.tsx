@@ -1,5 +1,5 @@
-import GameItems from "../components/GameItems";
-import CategoryItems from "../components/CategoryItems";
+import GameList from "../components/GameList";
+import CategoryList from "../components/CategoryList";
 import Logout from "../components/Logout";
 import PlayerItem from "../components/PlayerItem";
 import SearchGame from "../components/SearchGame";
@@ -24,13 +24,13 @@ export default function Casino(): JSX.Element {
           <div className="twelve wide column">
             <h3 className="ui dividing header">Games</h3>
             <div className="ui relaxed divided game items links">
-              <GameItems />
+              <GameList />
             </div>
           </div>
           <div className="four wide column">
             <h3 className="ui dividing header">Categories</h3>
             <div className="ui selection animated list category items">
-              <CategoryItems />
+              <CategoryList />
             </div>
           </div>
         </div>

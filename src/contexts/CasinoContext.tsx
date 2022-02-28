@@ -2,7 +2,7 @@ import React from "react";
 
 import CasinoContextInterface from "../interfaces/casino/CasinoContextInterface";
 import CasinoContextProviderPropsInterface from "../interfaces/casino/CasinoContextProviderPropsInterface";
-import CasinoGamesStateInterface from "../interfaces/casino/CasinoGamesSatesInterface";
+import CasinoContextStateInterface from "../interfaces/casino/CasinoContextStateInterface";
 import GameInterface from "../interfaces/game/GameInterface";
 
 const CasinoContext = React.createContext<CasinoContextInterface>({
@@ -15,7 +15,7 @@ const CasinoContext = React.createContext<CasinoContextInterface>({
 export function CasinoContextProvider(
   props: CasinoContextProviderPropsInterface
 ): JSX.Element {
-  const [state, setState] = React.useState<CasinoGamesStateInterface>({
+  const [state, setState] = React.useState<CasinoContextStateInterface>({
     databaseGames: [],
     filteredGames: [],
     filterName: "",

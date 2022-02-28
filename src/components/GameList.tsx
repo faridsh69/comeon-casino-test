@@ -4,12 +4,12 @@ import { getGames } from "../Services/CasinoService";
 import Alert from "./Alert";
 import GameItem from "./GameItem";
 import GameInterface from "../interfaces/game/GameInterface";
-import GameItemsStateInterface from "../interfaces/game/GameItemsStateInterface";
+import GameListStateInterface from "../interfaces/game/GameListStateInterface";
 import useCasinoContext from "../contexts/CasinoContext";
 
-export default function GameItems(): JSX.Element {
+export default function GameList(): JSX.Element {
   const { filteredGames, setDatabaseGames } = useCasinoContext();
-  const [state, setState] = React.useState<GameItemsStateInterface>({
+  const [state, setState] = React.useState<GameListStateInterface>({
     loading: true,
     errorMessage: "",
   });

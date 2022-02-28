@@ -3,10 +3,10 @@ import GameItemPropsInterface from "../interfaces/game/GameItemPropsInterface";
 
 export default function GameItem(props: GameItemPropsInterface): JSX.Element {
   const { game } = props;
-  const navigage = useNavigate();
+  const navigate = useNavigate();
 
   const navigateToInGame = (code: string) => {
-    return navigage(`/casino/${code}`);
+    return navigate(`/casino/${code}`);
   };
 
   return (

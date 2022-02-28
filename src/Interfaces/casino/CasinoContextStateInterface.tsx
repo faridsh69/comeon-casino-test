@@ -1,6 +1,6 @@
 import GameInterface from "../game/GameInterface";
 
-export default interface CasinoGamesStateInterface {
+export default interface CasinoContextStateInterface {
   databaseGames: GameInterface[];
   filteredGames: GameInterface[];
   filterName: string;
